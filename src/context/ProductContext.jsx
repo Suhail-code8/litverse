@@ -15,12 +15,13 @@ export default function ProdProvider({ children }) {
   const [userCart, setUserCart] = useState([]);
   const [orderedBooks, setOrderedBooks] = useState([]);
   const [userOrders, setUserOrders] = useState([]);
-  const [API, setAPI] = useState("https://litverse-db.onrender.com");
   const [isSingle, setIsSingle] = useState(false);
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
   let onCart = false;
   let navigate = useNavigate();
+  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
 
 
   //fetching datas and setting on the initial rendering
@@ -198,7 +199,6 @@ export default function ProdProvider({ children }) {
         setUserOrders,
         orderedBooks,
         setOrderedBooks,
-        API,
         isSingle,
         setIsSingle,
         product,

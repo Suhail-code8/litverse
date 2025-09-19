@@ -16,10 +16,11 @@ function Signup() {
     setPassAlert,
     getName,
     getPass,
-    getMail,
-    API
+    getMail
   } = useContext(AuthContext);
   const navigate = useNavigate();
+  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
 
 
   function addUser() {

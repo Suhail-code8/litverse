@@ -5,10 +5,12 @@ import Navbar from "../components/common/Navbar";
 import axios from "axios";
 
 function Profile() {
-  let { currentUser, userData,API } = useContext(Context);
+  let { currentUser, userData } = useContext(Context);
   const [modalon, setmodalon] = useState(false);
   const [mail,setmail]= useState("");
   const [pass,setPass]= useState("");
+  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
 
   function changePass(){
 if (userData.mail===mail){

@@ -28,9 +28,11 @@ export default function Login() {
     setUserCart,
     setUserWishlist,
   } = useContext(Context);
+  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
   useEffect(() => {
     async function fetchUsers() {
-      let users = await axios.get("http://localhost:4000/users");
+      let users = await axios.get("https://litverse-db.onrender.com/users");
       setUserData(users.data);
     }
     fetchUsers();

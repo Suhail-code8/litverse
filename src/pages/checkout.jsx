@@ -22,7 +22,6 @@ function CheckOut() {
   const {
     userData,
     setUserData,
-    API,
     orderedBooks,
     currentUser,
     userOrders,
@@ -34,6 +33,8 @@ function CheckOut() {
     setProductList,
     setUserCart,
   } = useContext(Context);
+  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
 
   let summary = location?.state;
   const subTotal = summary?.subTotal;

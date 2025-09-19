@@ -4,7 +4,9 @@ import axios from "axios";
 import AdminNav from "./AdminNav";
 
 export default function AdmProducts() {
-  const { productList, setProductList, API } = useContext(AdmContext);
+  const { productList, setProductList} = useContext(AdmContext);
+  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [type, setType] = useState("add");

@@ -20,7 +20,8 @@ export default function AuthProvider({ children }) {
   function getMail(e) {
     setMail(e.target.value);
   }
-  const API = "https://litverse-db.onrender.com";
+const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
   return (
     <AuthContext.Provider
       value={{
@@ -37,7 +38,7 @@ export default function AuthProvider({ children }) {
         getName,
         getPass,
         getMail,
-        API,
+       
       }}
     >
     {children}

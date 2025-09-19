@@ -4,7 +4,9 @@ import axios from "axios";
 import AdminNav from "./AdminNav";
 
 function AdmUsers() {
-  const { userList, setUserList, API } = useContext(AdmContext);
+  const { userList, setUserList } = useContext(AdmContext);
+  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
   const [search, setSearch] = useState("");
 
   async function action(user) {

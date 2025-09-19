@@ -8,7 +8,7 @@ function AdmProvider({ children }) {
   const [xorderlist,setXorderlist] = useState([]);
   const [productList, setProductList] = useState([]);
   const [orderList, setOrderList] = useState([]);
-  const [API, setAPI] = useState("https://litverse-db.onrender.com/");
+const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
 
 
   //useEffect for fetching ant setting our datas initially
@@ -52,7 +52,6 @@ function AdmProvider({ children }) {
         setProductList,
         orderList,
         setOrderList,
-        API,
       }}
     >
       {children}

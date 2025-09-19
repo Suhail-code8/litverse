@@ -4,8 +4,10 @@ import AdminNav from "./AdminNav";
 import axios from "axios";
 
 export default function AdmOrders() {
-  const { orderList, setOrderList, userList, setUserList, API } =
+  const { orderList, setOrderList, userList, setUserList } =
     useContext(AdmContext);
+    const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+
   const [filter, setFilter] = useState("All");
   // function to change status
   function getStatus(status, id) {
