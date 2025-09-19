@@ -1,0 +1,4978 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price": "46.98",
+      "image": "https://m.media-amazon.com/images/I/81ZtAPCqyGL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "A novel about a young shepherd's journey to find treasure in the Egyptian desert.",
+      "stock": 7,
+      "rating": "4.9",
+      "pages": 208,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Sarah Johnson",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "Life-changing book! The journey of Santiago resonated deeply with me. Coelho's writing is both simple and profound.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "James Wilson",
+          "rating": 4,
+          "date": "2024-09-02",
+          "review": "A beautiful story about chasing dreams and listening to your heart. At times, it felt a bit too philosophical, but overall inspiring.",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Aisha Patel",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "This book gave me courage to take risks in my own life. It's more than just a story; it feels like a spiritual guide.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Michael Chen",
+          "rating": 2,
+          "date": "2024-07-19",
+          "review": "Interesting ideas and nice metaphors, but I personally found it a bit repetitive. Good for those who enjoy allegories.",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Emily Davis",
+          "rating": 5,
+          "date": "2024-09-01",
+          "review": "An extraordinary read! It reminded me that the treasure we seek is often within ourselves. Highly recommended.",
+          "verified": true
+        },
+        {
+          "id": 6,
+          "reviewer": "David Thompson",
+          "rating": 5,
+          "date": "2024-08-10",
+          "review": "Coelho's writing is simple yet powerful. A book that makes you pause and reflect on life's bigger picture.",
+          "verified": true
+        },
+        {
+          "id": 7,
+          "reviewer": "Sophia Rodriguez",
+          "rating": 5,
+          "date": "2024-09-05",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 8,
+          "reviewer": "Liam Anderson",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 9,
+          "reviewer": "Olivia Martinez",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 10,
+          "reviewer": "Ethan Garcia",
+          "rating": 5,
+          "date": "2024-07-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 11,
+          "reviewer": "Isabella Lee",
+          "rating": 5,
+          "date": "2024-09-02",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 12,
+          "reviewer": "Noah Brown",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 13,
+          "reviewer": "Mia Williams",
+          "rating": 5,
+          "date": "2024-09-01",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 14,
+          "reviewer": "Benjamin Kim",
+          "rating": 5,
+          "date": "2024-07-12",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 15,
+          "reviewer": "Charlotte Taylor",
+          "rating": 5,
+          "date": "2024-08-29",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 16,
+          "reviewer": "William Harris",
+          "rating": 5,
+          "date": "2024-09-03",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 17,
+          "reviewer": "Amelia Clark",
+          "rating": 5,
+          "date": "2024-07-28",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 18,
+          "reviewer": "Lucas Lewis",
+          "rating": 5,
+          "date": "2024-09-04",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 19,
+          "reviewer": "Harper Walker",
+          "rating": 5,
+          "date": "2024-08-16",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 20,
+          "reviewer": "Daniel Hall",
+          "rating": 5,
+          "date": "2024-09-02",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 21,
+          "reviewer": "Evelyn Young",
+          "rating": 5,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "price": 34.38,
+      "image": "https://m.media-amazon.com/images/I/81YxjLkcAdL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Dystopian novel about totalitarian control and surveillance.",
+      "stock": 0,
+      "rating": 4.7,
+      "pages": 328,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 7,
+          "reviewer": "Robert Miller",
+          "rating": 5,
+          "date": "2024-09-01",
+          "review": "Terrifyingly relevant in today's world. Orwell's vision feels prophetic. A must-read dystopian masterpiece.",
+          "verified": true
+        },
+        {
+          "id": 8,
+          "reviewer": "Emma Thompson",
+          "rating": 4,
+          "date": "2024-05-18",
+          "review": "Powerful and disturbing. The concepts of Big Brother and thoughtcrime are chilling. Heavy but important read.",
+          "verified": true
+        },
+        {
+          "id": 9,
+          "reviewer": "Thomas Evans",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 10,
+          "reviewer": "Jennifer Adams",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 11,
+          "reviewer": "John Davis",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K. Rowling",
+      "price": 49.97,
+      "image": "https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg",
+      "category": "Fiction",
+      "description": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts and the boy who lived.",
+      "stock": 6,
+      "rating": 4.9,
+      "pages": 336,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Alice Johnson",
+          "rating": 5,
+          "date": "2024-07-01",
+          "review": "A magical beginning to an unforgettable series. Rowling's world-building is phenomenal!",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Bob Smith",
+          "rating": 5,
+          "date": "2024-07-02",
+          "review": "Loved the characters and the magic. Perfect book for all ages.",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Catherine Lee",
+          "rating": 5,
+          "date": "2024-07-03",
+          "review": "This book captured my imagination from page one. Absolutely enchanting.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "David Brown",
+          "rating": 5,
+          "date": "2024-07-04",
+          "review": "A timeless classic. Harry Potter is a character you will never forget.",
+          "verified": true
+        },
+        {
+          "id": 5,
+          "reviewer": "Emily Davis",
+          "rating": 5,
+          "date": "2024-07-05",
+          "review": "The story, magic, and adventure are perfectly blended. Can't wait to read the next one!",
+          "verified": true
+        },
+        {
+          "id": 6,
+          "reviewer": "Frank Miller",
+          "rating": 5,
+          "date": "2024-07-06",
+          "review": "Rowling's writing is captivating and whimsical. Loved every moment.",
+          "verified": true
+        },
+        {
+          "id": 7,
+          "reviewer": "Grace Wilson",
+          "rating": 5,
+          "date": "2024-07-07",
+          "review": "Magical, thrilling, and heartwarming. A must-read for fantasy lovers.",
+          "verified": true
+        },
+        {
+          "id": 8,
+          "reviewer": "Henry Thomas",
+          "rating": 5,
+          "date": "2024-07-08",
+          "review": "I felt like I was actually at Hogwarts. Brilliant storytelling.",
+          "verified": true
+        },
+        {
+          "id": 9,
+          "reviewer": "Isabella Garcia",
+          "rating": 5,
+          "date": "2024-07-09",
+          "review": "Incredible world-building and unforgettable characters. Pure magic.",
+          "verified": true
+        },
+        {
+          "id": 10,
+          "reviewer": "Jack Martinez",
+          "rating": 5,
+          "date": "2024-07-10",
+          "review": "This book reminds you why imagination is so important. Loved it.",
+          "verified": true
+        },
+        {
+          "id": 11,
+          "reviewer": "Karen Rodriguez",
+          "rating": 5,
+          "date": "2024-07-11",
+          "review": "A perfect start to the Harry Potter series. Truly magical.",
+          "verified": true
+        },
+        {
+          "id": 12,
+          "reviewer": "Liam Johnson",
+          "rating": 5,
+          "date": "2024-07-12",
+          "review": "Fantastic adventure, engaging characters, and a world you never want to leave.",
+          "verified": true
+        },
+        {
+          "id": 13,
+          "reviewer": "Mia Anderson",
+          "rating": 5,
+          "date": "2024-07-13",
+          "review": "Rowling's storytelling is flawless. Couldn't put it down.",
+          "verified": true
+        },
+        {
+          "id": 14,
+          "reviewer": "Nathan White",
+          "rating": 5,
+          "date": "2024-07-14",
+          "review": "An absolute classic. Magical, inspiring, and fun to read.",
+          "verified": true
+        },
+        {
+          "id": 15,
+          "reviewer": "Olivia Lewis",
+          "rating": 5,
+          "date": "2024-07-15",
+          "review": "A brilliant introduction to the Harry Potter universe. Loved it!",
+          "verified": true
+        },
+        {
+          "id": 16,
+          "reviewer": "Peter Hall",
+          "rating": 5,
+          "date": "2024-07-16",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 17,
+          "reviewer": "Quinn Allen",
+          "rating": 5,
+          "date": "2024-07-17",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 18,
+          "reviewer": "Rachel Young",
+          "rating": 5,
+          "date": "2024-07-18",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 19,
+          "reviewer": "Samuel King",
+          "rating": 5,
+          "date": "2024-07-19",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 20,
+          "reviewer": "Tina Scott",
+          "rating": 5,
+          "date": "2024-07-20",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 21,
+          "reviewer": "Ulysses Adams",
+          "rating": 4,
+          "date": "2024-07-21",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 22,
+          "reviewer": "Victoria Baker",
+          "rating": 5,
+          "date": "2024-07-22",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 23,
+          "reviewer": "William Carter",
+          "rating": 5,
+          "date": "2024-07-23",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 24,
+          "reviewer": "Xavier Collins",
+          "rating": 5,
+          "date": "2024-07-24",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 25,
+          "reviewer": "Yara Evans",
+          "rating": 5,
+          "date": "2024-07-25",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 26,
+          "reviewer": "Zachary Foster",
+          "rating": 5,
+          "date": "2024-07-26",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 27,
+          "reviewer": "Abigail Green",
+          "rating": 5,
+          "date": "2024-07-27",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 28,
+          "reviewer": "Benjamin Harris",
+          "rating": 5,
+          "date": "2024-07-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 29,
+          "reviewer": "Chloe Jackson",
+          "rating": 5,
+          "date": "2024-07-29",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 30,
+          "reviewer": "Daniel Lewis",
+          "rating": 5,
+          "date": "2024-07-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 31,
+          "reviewer": "Ella Martin",
+          "rating": 5,
+          "date": "2024-07-31",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 32,
+          "reviewer": "Felix Nelson",
+          "rating": 5,
+          "date": "2024-08-01",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 33,
+          "reviewer": "Gabriella Owens",
+          "rating": 5,
+          "date": "2024-08-02",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 34,
+          "reviewer": "Harrison Parker",
+          "rating": 5,
+          "date": "2024-08-03",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 35,
+          "reviewer": "Isla Quinn",
+          "rating": 5,
+          "date": "2024-08-04",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 36,
+          "reviewer": "Jack Reed",
+          "rating": 5,
+          "date": "2024-08-05",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 37,
+          "reviewer": "Kara Stone",
+          "rating": 5,
+          "date": "2024-08-06",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 38,
+          "reviewer": "Leo Taylor",
+          "rating": 5,
+          "date": "2024-08-07",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 39,
+          "reviewer": "Maya Underwood",
+          "rating": 5,
+          "date": "2024-08-08",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 40,
+          "reviewer": "Nathan Vega",
+          "rating": 5,
+          "date": "2024-08-09",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 32.48,
+      "image": "https://m.media-amazon.com/images/I/81TLiZrasVL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Story of wealth, love, and the American Dream in Jazz Age.",
+      "stock": 15,
+      "rating": 4.3,
+      "pages": 180,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 18,
+          "reviewer": "Jessica Park",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "Fitzgerald's prose is beautiful, capturing the excess and emptiness of the Jazz Age perfectly.",
+          "verified": true
+        },
+        {
+          "id": 19,
+          "reviewer": "Nicholas Reed",
+          "rating": 3,
+          "date": "2024-08-28",
+          "review": "Good writing but I found the characters hard to relate to. The symbolism is impressive though.",
+          "verified": true
+        },
+        {
+          "id": 20,
+          "reviewer": "Gabriel Foster",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 21,
+          "reviewer": "Amanda Chen",
+          "rating": 4,
+          "date": "2024-08-10",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 22,
+          "reviewer": "Tom Wilson",
+          "rating": 4,
+          "date": "2024-07-28",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 27.48,
+      "image": "https://m.media-amazon.com/images/I/91E9-FyfvGL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Romantic novel about the Bennet family and Mr. Darcy.",
+      "stock": 2,
+      "rating": 4.5,
+      "pages": 432,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 23,
+          "reviewer": "Rachel Evans",
+          "rating": 5,
+          "date": "2024-07-18",
+          "review": "The ultimate romantic novel! Elizabeth and Darcy's relationship development is perfectly crafted. Witty dialogue throughout.",
+          "verified": false
+        },
+        {
+          "id": 24,
+          "reviewer": "Linda Chang",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Austen's social commentary wrapped in romance. Elizabeth Bennet is such a strong, independent character.",
+          "verified": true
+        },
+        {
+          "id": 25,
+          "reviewer": "Patricia Davis",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 26,
+          "reviewer": "Charles Lewis",
+          "rating": 4,
+          "date": "2024-08-05",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 27,
+          "reviewer": "Jane Foster",
+          "rating": 5,
+          "date": "2024-07-20",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price": 28.75,
+      "image": "https://m.media-amazon.com/images/I/8125BDk3l9L.jpg",
+      "category": "Fiction",
+      "description": "Story of teenage rebellion and alienation in New York City.",
+      "stock": 25,
+      "rating": 4.2,
+      "pages": 234,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 28,
+          "reviewer": "Samuel Turner",
+          "rating": 4,
+          "date": "2024-07-08",
+          "review": "Holden's voice is so authentic. Captures teenage angst and disillusionment perfectly, though can be depressing.",
+          "verified": true
+        },
+        {
+          "id": 29,
+          "reviewer": "Robert Kim",
+          "rating": 3,
+          "date": "2024-06-30",
+          "review": "Either you love Holden or you don't. I found him whiny but understand why this resonates with many readers.",
+          "verified": false
+        },
+        {
+          "id": 30,
+          "reviewer": "Teresa Smith",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 31,
+          "reviewer": "Nathan Reed",
+          "rating": 4,
+          "date": "2024-08-08",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 32,
+          "reviewer": "Christopher Adams",
+          "rating": 3,
+          "date": "2024-07-15",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Lord of the Flies",
+      "author": "William Golding",
+      "price": 30.63,
+      "image": "https://m.media-amazon.com/images/I/716MU3GOvJL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Story of boys stranded on an island and their descent into savagery.",
+      "stock": 31,
+      "rating": 4,
+      "pages": 224,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 33,
+          "reviewer": "Brian Green",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "Disturbing but brilliant exploration of human nature. The transformation from civilized boys to savages is chilling.",
+          "verified": true
+        },
+        {
+          "id": 34,
+          "reviewer": "Philip Morgan",
+          "rating": 5,
+          "date": "2024-07-12",
+          "review": "Golding masterfully shows how thin the veneer of civilization really is. Ralph vs Jack represents eternal human conflict.",
+          "verified": false
+        },
+        {
+          "id": 35,
+          "reviewer": "Ian Sullivan",
+          "rating": 4,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 36,
+          "reviewer": "Derek Thompson",
+          "rating": 3,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 37,
+          "reviewer": "Scott Richardson",
+          "rating": 4,
+          "date": "2024-07-30",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price": 51.25,
+      "image": "https://m.media-amazon.com/images/I/712cDO7d73L.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Fantasy novel about Bilbo Baggins' journey to the Lonely Mountain.",
+      "stock": 26,
+      "rating": 4.9,
+      "pages": 310,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 38,
+          "reviewer": "Frank Williams",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Perfect introduction to Middle-earth! Bilbo's transformation from comfortable hobbit to adventurer is wonderful. Tolkien's world-building is unmatched.",
+          "verified": true
+        },
+        {
+          "id": 39,
+          "reviewer": "Daniel Carter",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "Timeless adventure story. The riddle scene with Gollum is one of the best chapters in fantasy literature.",
+          "verified": false
+        },
+        {
+          "id": 40,
+          "reviewer": "Andrew Parker",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "Charming and exciting. Great for both children and adults. Makes you want to go on an adventure!",
+          "verified": true
+        },
+        {
+          "id": 41,
+          "reviewer": "Matthew Evans",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 42,
+          "reviewer": "Timothy Lewis",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 43,
+          "reviewer": "Kevin Roberts",
+          "rating": 4,
+          "date": "2024-08-08",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "price": 24.98,
+      "image": "https://m.media-amazon.com/images/I/71JUJ6pGoIL.jpg",
+      "category": "Fiction",
+      "description": "Allegorical novella about farm animals rebelling against their human farmer.",
+      "stock": 42,
+      "rating": 4.5,
+      "pages": 112,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 44,
+          "reviewer": "Paul Richardson",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Brilliant allegory about power and corruption. 'All animals are equal, but some animals are more equal than others' - chilling.",
+          "verified": true
+        },
+        {
+          "id": 45,
+          "reviewer": "Steven Walker",
+          "rating": 4,
+          "date": "2024-08-10",
+          "review": "Concise but powerful. Orwell packs so much meaning into this short book. The ending is haunting.",
+          "verified": false
+        },
+        {
+          "id": 46,
+          "reviewer": "Gary Foster",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 47,
+          "reviewer": "Anthony Lee",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 48,
+          "reviewer": "Jason Reed",
+          "rating": 4,
+          "date": "2024-07-25",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "The Shining",
+      "author": "Stephen King",
+      "price": 43.75,
+      "image": "https://m.media-amazon.com/images/I/81IMi+0fyJL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Horror novel about a family's terrifying experience in an isolated hotel.",
+      "stock": 19,
+      "rating": 4.7,
+      "pages": 447,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 49,
+          "reviewer": "Eric Peterson",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Absolutely terrifying! King's psychological horror at its finest. Jack's descent into madness is expertly crafted.",
+          "verified": true
+        },
+        {
+          "id": 50,
+          "reviewer": "Scott Mitchell",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "Couldn't sleep for days! The Overlook Hotel becomes a character itself. Room 217 still gives me chills.",
+          "verified": false
+        },
+        {
+          "id": 51,
+          "reviewer": "Nicholas Baker",
+          "rating": 4,
+          "date": "2024-08-12",
+          "review": "King at his psychological best. More terrifying than most slasher novels because it feels so real.",
+          "verified": true
+        },
+        {
+          "id": 52,
+          "reviewer": "Jonathan King",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 53,
+          "reviewer": "Isaac Nelson",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "price": 56.25,
+      "image": "https://rukminim2.flixcart.com/image/704/844/xif0q/book/z/9/u/sapiens-original-imahy8vxzsrcfgqz.jpeg?q=90&crop=false",
+      "category": "Non-Fiction",
+      "description": "Exploration of human history and evolution.",
+      "stock": 28,
+      "rating": 4.8,
+      "pages": 443,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 54,
+          "reviewer": "Mark Thompson",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Mind-blowing perspective on human history! Harari makes complex topics accessible. Changed how I view civilization.",
+          "verified": true
+        },
+        {
+          "id": 55,
+          "reviewer": "Thomas Evans",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "Fascinating insights into agriculture, money, religion, and empires. Makes you question everything about modern society.",
+          "verified": false
+        },
+        {
+          "id": 56,
+          "reviewer": "Alan Parker",
+          "rating": 4,
+          "date": "2024-08-05",
+          "review": "Great overview but sometimes oversimplifies complex topics. Still highly educational and engaging.",
+          "verified": true
+        },
+        {
+          "id": 57,
+          "reviewer": "Henry Stewart",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 58,
+          "reviewer": "Edward Wilson",
+          "rating": 5,
+          "date": "2024-08-10",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 59,
+          "reviewer": "Brian Cooper",
+          "rating": 4,
+          "date": "2024-07-30",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "price": 49.75,
+      "image": "https://upload.wikimedia.org/wikipedia/en/c/c1/Thinking%2C_Fast_and_Slow.jpg",
+      "category": "Non-Fiction",
+      "description": "Explores the two systems that drive human thinking.",
+      "stock": 20,
+      "rating": 4.6,
+      "pages": 499,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 60,
+          "reviewer": "Robert Miller",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "Groundbreaking work on decision-making! System 1 vs System 2 thinking explained brilliantly. Dense but rewarding.",
+          "verified": true
+        },
+        {
+          "id": 61,
+          "reviewer": "David Clark",
+          "rating": 4,
+          "date": "2024-08-12",
+          "review": "Kahneman's insights into cognitive biases are eye-opening. Can be dry at times but packed with valuable information.",
+          "verified": false
+        },
+        {
+          "id": 62,
+          "reviewer": "Michael Turner",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 63,
+          "reviewer": "Christopher Baker",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 64,
+          "reviewer": "Paul Nelson",
+          "rating": 5,
+          "date": "2024-08-08",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "price": 54.97,
+      "image": "https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg",
+      "category": "Non-Fiction",
+      "description": "Counterintuitive approach to living a good life.",
+      "stock": 27,
+      "rating": 4.3,
+      "pages": 224,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 65,
+          "reviewer": "Steven Harris",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Refreshingly honest take on self-help. Manson cuts through the BS with humor and practical advice.",
+          "verified": true
+        },
+        {
+          "id": 66,
+          "reviewer": "Kevin Lewis",
+          "rating": 3,
+          "date": "2024-08-10",
+          "review": "Good points about choosing what to care about, but the constant swearing gets old. Mixed bag overall.",
+          "verified": false
+        },
+        {
+          "id": 67,
+          "reviewer": "Richard Walker",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 68,
+          "reviewer": "Gary Mitchell",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 69,
+          "reviewer": "Jason Carter",
+          "rating": 4,
+          "date": "2024-08-05",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "The Power of Now",
+      "author": "Eckhart Tolle",
+      "price": 41.88,
+      "image": "https://m.media-amazon.com/images/I/61Ij8nLooNL.jpg",
+      "category": "Non-Fiction",
+      "description": "Spiritual guide to living in the present moment.",
+      "stock": 30,
+      "rating": 4.4,
+      "pages": 236,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 70,
+          "reviewer": "Daniel Evans",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Transformative book about mindfulness and presence. Tolle's insights about ego and consciousness are profound.",
+          "verified": true
+        },
+        {
+          "id": 71,
+          "reviewer": "Andrew Thompson",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "Deep wisdom but can be repetitive. The core message about living in the present is powerful and needed.",
+          "verified": false
+        },
+        {
+          "id": 72,
+          "reviewer": "Peter Martin",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 73,
+          "reviewer": "Mark Wilson",
+          "rating": 4,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 74,
+          "reviewer": "Brian Roberts",
+          "rating": 4,
+          "date": "2024-08-08",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "price": 47.38,
+      "image": "https://images.meesho.com/images/products/539358699/jhdeo_512.webp?width=512",
+      "category": "Non-Fiction",
+      "description": "Practical guide to building good habits and breaking bad ones.",
+      "stock": 24,
+      "rating": 4.8,
+      "pages": 320,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 75,
+          "reviewer": "Thomas Parker",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Best book on habits I've ever read! The 1% better concept is genius. Practical strategies that actually work.",
+          "verified": true
+        },
+        {
+          "id": 76,
+          "reviewer": "David Mitchell",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "Clear's framework is brilliant - cue, craving, response, reward. Finally understood why my previous habit attempts failed.",
+          "verified": false
+        },
+        {
+          "id": 77,
+          "reviewer": "Christopher Harris",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "Evidence-based approach to behavioral change. The compound effect of small changes is real!",
+          "verified": true
+        },
+        {
+          "id": 78,
+          "reviewer": "Paul Turner",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 79,
+          "reviewer": "Steven Cooper",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 80,
+          "reviewer": "Kevin Richardson",
+          "rating": 5,
+          "date": "2024-08-10",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "The God of Small Things",
+      "author": "Arundhati Roy",
+      "price": 44.38,
+      "image": "https://m.media-amazon.com/images/I/91saO95VziL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Story of fraternal twins in Kerala and tragic events that change their lives.",
+      "stock": 21,
+      "rating": 4.5,
+      "pages": 340,
+      "language": "English",
+      "isActive": true
+    },
+    {
+      "id": "18",
+      "title": "The Very Hungry Caterpillar",
+      "author": "Eric Carle",
+      "price": 22.48,
+      "image": "https://m.media-amazon.com/images/I/513ESqj18YL.UF894,1000_QL80.jpg",
+      "category": "Children's",
+      "description": "Colorful children's book about a caterpillar's transformation into a butterfly.",
+      "stock": 50,
+      "rating": 4.9,
+      "pages": 26,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 91,
+          "reviewer": "Sarah Johnson",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Absolute classic! My kids never get tired of this book. The illustrations are gorgeous and the story teaches counting.",
+          "verified": true
+        },
+        {
+          "id": 92,
+          "reviewer": "Jessica Miller",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Perfect for teaching life cycles and days of the week. Kids love the interactive holes in the pages!",
+          "verified": false
+        },
+        {
+          "id": 93,
+          "reviewer": "Robert Evans",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 94,
+          "reviewer": "Thomas Wilson",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 95,
+          "reviewer": "Daniel Thompson",
+          "rating": 5,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Goodnight Moon",
+      "author": "Margaret Wise Brown",
+      "price": 18.75,
+      "image": "https://img1.od-cdn.com/ImageType-400/1103-1/%7B6696BB3C-99C4-40E7-BD4B-B68E0BE25C78%7DIMG400.JPG",
+      "category": "Children's",
+      "description": "Bedtime story classic for young children.",
+      "stock": 44,
+      "rating": 4.8,
+      "pages": 32,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 96,
+          "reviewer": "Jennifer Lee",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "The ultimate bedtime book! Soothing rhythm that actually helps kids wind down. We read this every night.",
+          "verified": true
+        },
+        {
+          "id": 97,
+          "reviewer": "Michelle Davis",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "Magical bedtime ritual. The repetitive text is hypnotic in the best way. Puts my toddler right to sleep.",
+          "verified": false
+        },
+        {
+          "id": 98,
+          "reviewer": "Amanda Harris",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 99,
+          "reviewer": "Elizabeth Martin",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 100,
+          "reviewer": "Sarah Wilson",
+          "rating": 5,
+          "date": "2024-08-10",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Where the Wild Things Are",
+      "author": "Maurice Sendak",
+      "price": 24.98,
+      "image": "https://m.media-amazon.com/images/S/pv-target-images/1d34ec1bacaad032ca9794734787350e540e66cd185d3d5c98b93d4d46731c7c.jpg",
+      "category": "Children's",
+      "description": "Imaginative story of a boy's adventure with wild creatures.",
+      "stock": 38,
+      "rating": 4.8,
+      "pages": 48,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 101,
+          "reviewer": "Robert Johnson",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Sendak's masterpiece! Max's journey to the Wild Things perfectly captures childhood imagination and emotions.",
+          "verified": true
+        },
+        {
+          "id": 102,
+          "reviewer": "Thomas Anderson",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "The illustrations are incredible - both whimsical and slightly scary. Deals with anger and forgiveness beautifully.",
+          "verified": false
+        },
+        {
+          "id": 103,
+          "reviewer": "Daniel Wilson",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 104,
+          "reviewer": "Paul Thompson",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 105,
+          "reviewer": "Kevin Martin",
+          "rating": 5,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "price": 47.47,
+      "image": "https://m.media-amazon.com/images/I/71m91l0treL._UF1000,1000_QL80_.jpg",
+      "category": "Fiction",
+      "description": "Epic science fiction novel set on the desert planet Arrakis, focusing on politics, religion, and ecology.",
+      "stock": 18,
+      "rating": 4.8,
+      "pages": 412,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 106,
+          "reviewer": "Robert Johnson",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "The greatest sci-fi novel ever written! Herbert's world-building is unparalleled. Arrakis feels completely real.",
+          "verified": true
+        },
+        {
+          "id": 107,
+          "reviewer": "Thomas Anderson",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Complex but rewarding. Paul's journey from duke's son to Muad'Dib is epic. The ecology themes are ahead of their time.",
+          "verified": false
+        },
+        {
+          "id": 108,
+          "reviewer": "Daniel Wilson",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "Dense read but worth it. The political intrigue and religious themes add depth to the adventure story.",
+          "verified": true
+        },
+        {
+          "id": 109,
+          "reviewer": "Paul Thompson",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 110,
+          "reviewer": "Kevin Martin",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 111,
+          "reviewer": "Steven Harris",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "The Handmaid's Tale",
+      "author": "Margaret Atwood",
+      "price": 36.25,
+      "image": "https://m.media-amazon.com/images/I/61yRxXpwl6L._UF1000,1000_QL80_.jpg",
+      "category": "Fiction",
+      "description": "Dystopian novel about a totalitarian society where women are subjugated and used for reproduction.",
+      "stock": 29,
+      "rating": 4.6,
+      "pages": 311,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 112,
+          "reviewer": "Jennifer Adams",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Chillingly relevant. Atwood's dystopia feels uncomfortably possible. Offred's voice is haunting and unforgettable.",
+          "verified": true
+        },
+        {
+          "id": 113,
+          "reviewer": "Michelle Carter",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "Powerful and disturbing. The world-building is meticulous and terrifying. Hard to read but important.",
+          "verified": false
+        },
+        {
+          "id": 114,
+          "reviewer": "Rebecca Turner",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 115,
+          "reviewer": "Amanda Wilson",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 116,
+          "reviewer": "Elizabeth Parker",
+          "rating": 4,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "price": 33.13,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_aPSd05FIh5tfbQ7zfBRlbhyh9BYaku7yhg&s",
+      "category": "Fiction",
+      "description": "A dystopian novel that anticipates developments in reproductive technology and psychological manipulation.",
+      "stock": 31,
+      "rating": 4.5,
+      "pages": 288,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 117,
+          "reviewer": "Sarah Johnson",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Prophetic vision of the future! Huxley's predictions about technology and society are eerily accurate.",
+          "verified": true
+        },
+        {
+          "id": 118,
+          "reviewer": "Jessica Miller",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "The caste system and conditioning are brilliantly conceived. Bernard and John's struggles feel very human.",
+          "verified": false
+        },
+        {
+          "id": 119,
+          "reviewer": "Robert Evans",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 120,
+          "reviewer": "Thomas Wilson",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 121,
+          "reviewer": "Daniel Thompson",
+          "rating": 4,
+          "date": "2024-08-10",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "price": 41.25,
+      "image": "https://m.media-amazon.com/images/I/811UkTEVz4L._UF894,1000_QL80_.jpg",
+      "category": "Fiction",
+      "description": "A post-apocalyptic tale of a journey taken by a father and his young son through a barren landscape.",
+      "stock": 18,
+      "rating": 4.7,
+      "pages": 287,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 122,
+          "reviewer": "Jennifer Lee",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Devastatingly beautiful. McCarthy's sparse prose perfectly matches the bleak landscape. The father-son relationship is heartbreaking.",
+          "verified": true
+        },
+        {
+          "id": 123,
+          "reviewer": "Michelle Davis",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Haunting and hopeful simultaneously. The ending gave me chills. McCarthy's writing style is unique and powerful.",
+          "verified": false
+        },
+        {
+          "id": 124,
+          "reviewer": "Amanda Harris",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 125,
+          "reviewer": "Elizabeth Martin",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 126,
+          "reviewer": "Sarah Wilson",
+          "rating": 4,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "Slaughterhouse-Five",
+      "author": "Kurt Vonnegut",
+      "price": 32.48,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRamn2tOUX6G6HgVGV76fbPk-pvEH6lCpJ96g&s",
+      "category": "Fiction",
+      "description": "A satirical novel about the World War II experiences of Billy Pilgrim, who becomes 'unstuck in time'.",
+      "stock": 26,
+      "rating": 4.4,
+      "pages": 275,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 127,
+          "reviewer": "Robert Johnson",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "So it goes... Vonnegut's anti-war message wrapped in dark humor and sci-fi elements. Billy Pilgrim is unforgettable.",
+          "verified": true
+        },
+        {
+          "id": 128,
+          "reviewer": "Thomas Anderson",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "Brilliant satire about war and fate. The time-jumping structure perfectly reflects trauma and memory.",
+          "verified": false
+        },
+        {
+          "id": 129,
+          "reviewer": "Daniel Wilson",
+          "rating": 4,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 130,
+          "reviewer": "Paul Thompson",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 131,
+          "reviewer": "Kevin Martin",
+          "rating": 4,
+          "date": "2024-08-08",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Educated",
+      "author": "Tara Westover",
+      "price": 49.97,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrTTESsJegCkuU5wAov3x_07gymlZEvrzepw&s",
+      "category": "Non-Fiction",
+      "description": "A memoir about a woman who leaves her survivalist family and goes on to earn a PhD from Cambridge University.",
+      "stock": 33,
+      "rating": 4.8,
+      "pages": 334,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 132,
+          "reviewer": "Jennifer Adams",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Incredible journey from isolation to education. Westover's transformation is inspiring and heartbreaking. Couldn't put it down.",
+          "verified": true
+        },
+        {
+          "id": 133,
+          "reviewer": "Michelle Carter",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Powerful story about the transformative power of learning. The family dynamics are complex and painful to read.",
+          "verified": false
+        },
+        {
+          "id": 134,
+          "reviewer": "Rebecca Turner",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 135,
+          "reviewer": "Amanda Wilson",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 136,
+          "reviewer": "Elizabeth Parker",
+          "rating": 5,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "title": "Born a Crime",
+      "author": "Trevor Noah",
+      "price": 43.13,
+      "image": "https://m.media-amazon.com/images/I/91mePFAgywL._UF1000,1000_QL80_.jpg",
+      "category": "Non-Fiction",
+      "description": "Stories from Trevor Noah's childhood in apartheid South Africa, where his birth was literally a crime.",
+      "stock": 27,
+      "rating": 4.7,
+      "pages": 304,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 137,
+          "reviewer": "Sarah Johnson",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Noah balances humor and heartbreak perfectly. His mother is incredible. Learned so much about apartheid South Africa.",
+          "verified": true
+        },
+        {
+          "id": 138,
+          "reviewer": "Jessica Miller",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "Eye-opening memoir about resilience and family. Noah's storytelling ability shines through every chapter.",
+          "verified": false
+        },
+        {
+          "id": 139,
+          "reviewer": "Robert Evans",
+          "rating": 4,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 140,
+          "reviewer": "Thomas Wilson",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 141,
+          "reviewer": "Daniel Thompson",
+          "rating": 5,
+          "date": "2024-08-10",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "title": "The Body: A Guide for Occupants",
+      "author": "Bill Bryson",
+      "price": 45.89,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvJVbpwB1Cmb8-6PREt8cBrtjUDJf7Mzw9pw&s",
+      "category": "Non-Fiction",
+      "description": "A fascinating and humorous journey through the human body, exploring its functions and mysteries.",
+      "stock": 21,
+      "rating": 4.6,
+      "pages": 450,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 142,
+          "reviewer": "Jennifer Lee",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Bryson makes anatomy fascinating! His wit and wonder turn complex biology into engaging stories. Perfect blend of humor and science.",
+          "verified": true
+        },
+        {
+          "id": 143,
+          "reviewer": "Michelle Davis",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Amazing facts about our bodies. Bryson's storytelling makes medical topics accessible and entertaining.",
+          "verified": false
+        },
+        {
+          "id": 144,
+          "reviewer": "Amanda Harris",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 145,
+          "reviewer": "Elizabeth Martin",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 146,
+          "reviewer": "Sarah Wilson",
+          "rating": 5,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "title": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+      "author": "Susan Cain",
+      "price": 41.25,
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/1e/QuietBookCover.jpg",
+      "category": "Non-Fiction",
+      "description": "A book that challenges cultural biases for extroversion and reveals the power and potential of introverts.",
+      "stock": 24,
+      "rating": 4.5,
+      "pages": 333,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 147,
+          "reviewer": "Robert Johnson",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Life-changing for introverts! Cain validates our quiet strength and shows how society benefits from our contributions.",
+          "verified": true
+        },
+        {
+          "id": 148,
+          "reviewer": "Thomas Anderson",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "Eye-opening research about personality types. Helped me understand myself and appreciate different working styles.",
+          "verified": false
+        },
+        {
+          "id": 149,
+          "reviewer": "Daniel Wilson",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 150,
+          "reviewer": "Paul Thompson",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 151,
+          "reviewer": "Kevin Martin",
+          "rating": 4,
+          "date": "2024-08-10",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
+      "author": "Matthew Walker",
+      "price": 46.88,
+      "image": "https://upload.wikimedia.org/wikipedia/en/9/94/Why_We_Sleep_book_cover.png",
+      "category": "Non-Fiction",
+      "description": "A neuroscientist explains the vital importance of sleep and how it affects every aspect of our physical and mental health.",
+      "stock": 19,
+      "rating": 4.8,
+      "pages": 368,
+      "language": "English",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 152,
+          "reviewer": "Steven Harris",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Revolutionary book about sleep! Walker's research is compelling and changed my entire sleep routine. Essential reading for everyone.",
+          "verified": true
+        },
+        {
+          "id": 153,
+          "reviewer": "Gary Mitchell",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Eye-opening facts about sleep deprivation. Made me prioritize my 8 hours! The dream research is fascinating.",
+          "verified": false
+        },
+        {
+          "id": 154,
+          "reviewer": "Jason Carter",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Comprehensive look at sleep research. Some sections are technical but the implications are huge for public health.",
+          "verified": true
+        },
+        {
+          "id": 155,
+          "reviewer": "Richard Walker",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 156,
+          "reviewer": "Christopher Cooper",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 157,
+          "reviewer": "David Richardson",
+          "rating": 4,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "title": "Aadujeevitham",
+      "author": "Benyamin",
+      "price": 39.98,
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1283726170i/9242236.jpg",
+      "category": "Fiction",
+      "description": "Story of an Indian emigrant forced into slavery in Saudi Arabia.",
+      "stock": 25,
+      "rating": 4.8,
+      "pages": 248,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 158,
+          "reviewer": "Rajesh Kumar",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Heart-wrenching story of survival and human resilience. Benyamin's portrayal of migrant worker struggles is deeply moving.",
+          "verified": true
+        },
+        {
+          "id": 159,
+          "reviewer": "Priya Sharma",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Eye-opening account of modern slavery. The goat herding scenes are beautifully written despite the harsh reality.",
+          "verified": false
+        },
+        {
+          "id": 160,
+          "reviewer": "Vikram Menon",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "Powerful narrative about the dark side of Gulf migration. Made me think deeply about workers' rights.",
+          "verified": true
+        },
+        {
+          "id": 161,
+          "reviewer": "Anjali Patel",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 162,
+          "reviewer": "Arun Singh",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "title": "Randamoozham",
+      "author": "M. T. Vasudevan Nair",
+      "price": 41.88,
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/61wQAfd4W6L.AC_UL210_SR210,210.jpg",
+      "category": "Fiction",
+      "description": "Mahabharata retold from Bhima's perspective.",
+      "stock": 22,
+      "rating": 4.9,
+      "pages": 456,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 163,
+          "reviewer": "Suresh Nair",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Brilliant retelling from Bhima's perspective! MT's masterful writing brings fresh insights to the epic. Absolutely stunning.",
+          "verified": true
+        },
+        {
+          "id": 164,
+          "reviewer": "Meera Pillai",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "One of the greatest Malayalam novels ever written. The psychological depth of characters is extraordinary.",
+          "verified": false
+        },
+        {
+          "id": 165,
+          "reviewer": "Krishna Das",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 166,
+          "reviewer": "Lakshmi Nair",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 167,
+          "reviewer": "Gopalakrishnan",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "title": "Khasakkinte Ithihasam",
+      "author": "O. V. Vijayan",
+      "price": 37.48,
+      "image": "https://m.media-amazon.com/images/I/71qpBKQ0GxS.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Magical realism novel set in the fictional village of Khasak.",
+      "stock": 28,
+      "rating": 4.7,
+      "pages": 344,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 168,
+          "reviewer": "Anand Menon",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Vijayan's masterpiece! The blend of reality and magic in Khasak village is mesmerizing. Poetic and profound.",
+          "verified": true
+        },
+        {
+          "id": 169,
+          "reviewer": "Deepa Rajan",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "Complex but rewarding read. The symbolism and allegory require careful reading but worth every page.",
+          "verified": false
+        },
+        {
+          "id": 170,
+          "reviewer": "Mohan Kumar",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 171,
+          "reviewer": "Sarala Devi",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 172,
+          "reviewer": "Ravi Chandran",
+          "rating": 5,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "title": "Naalukettu",
+      "author": "M. T. Vasudevan Nair",
+      "price": 33.13,
+      "image": "https://upload.wikimedia.org/wikipedia/en/7/7a/Naalukettu_MT.jpg",
+      "category": "Fiction",
+      "description": "Coming-of-age story set in a traditional Nair tharavad.",
+      "stock": 19,
+      "rating": 4.6,
+      "pages": 276,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 173,
+          "reviewer": "Sreekumar Nair",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Beautiful portrayal of traditional Kerala family system. MT's understanding of human psychology is remarkable.",
+          "verified": true
+        },
+        {
+          "id": 174,
+          "reviewer": "Lalitha Menon",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Nostalgic and melancholic. The decay of joint family system is depicted with great sensitivity.",
+          "verified": false
+        },
+        {
+          "id": 175,
+          "reviewer": "Prakash Nair",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 176,
+          "reviewer": "Geetha Kumar",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 177,
+          "reviewer": "Balakrishnan",
+          "rating": 4,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "title": "Aarachar",
+      "author": "K. R. Meera",
+      "price": 46.25,
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/30/Aarachaar.jpg",
+      "category": "Fiction",
+      "description": "The story of a female executioner exploring themes of justice and morality.",
+      "stock": 16,
+      "rating": 4.8,
+      "pages": 520,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 178,
+          "reviewer": "Divya Nair",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Meera's bold exploration of justice and gender roles is phenomenal. The executioner's story is haunting and powerful.",
+          "verified": true
+        },
+        {
+          "id": 179,
+          "reviewer": "Vineeth Kumar",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Disturbing but brilliant. Challenges conventional notions of justice and morality. Not for the faint-hearted.",
+          "verified": false
+        },
+        {
+          "id": 180,
+          "reviewer": "Anjali Menon",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "Meera's narrative style is unique and gripping. The moral questions raised stay with you long after reading.",
+          "verified": true
+        },
+        {
+          "id": 181,
+          "reviewer": "Rahul Nair",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 182,
+          "reviewer": "Sneha Pillai",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "title": "Yakshi",
+      "author": "Malayattoor Ramakrishnan",
+      "price": 32.48,
+      "image": "https://rukminim2.flixcart.com/image/704/844/k05ljm80/book/0/0/1/yakshi-original-imafkydgzq2mmecg.jpeg?q=20&crop=false",
+      "category": "Fiction",
+      "description": "Psychological thriller exploring love, obsession, and supernatural elements.",
+      "stock": 21,
+      "rating": 4.4,
+      "pages": 268,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 183,
+          "reviewer": "Manoj Kumar",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Atmospheric and haunting! The blend of psychology and supernatural elements is masterfully done. Classic Malayalam thriller.",
+          "verified": true
+        },
+        {
+          "id": 184,
+          "reviewer": "Sindhu Nair",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Intriguing exploration of obsession and desire. The yakshi mythology is beautifully woven into the narrative.",
+          "verified": false
+        },
+        {
+          "id": 185,
+          "reviewer": "Rajiv Menon",
+          "rating": 4,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 186,
+          "reviewer": "Lakshmi Devi",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 187,
+          "reviewer": "Ganesh Kumar",
+          "rating": 3,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "title": "Chemmeen",
+      "author": "Thakazhi Sivasankara Pillai",
+      "price": 38.13,
+      "image": "https://m.media-amazon.com/images/I/91xXiiPwdvL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Classic love story set in the fishing community of Kerala.",
+      "stock": 23,
+      "rating": 4.8,
+      "pages": 320,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 188,
+          "reviewer": "Suresh Kumar",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Timeless love story! Thakazhi's portrayal of coastal life and fishing community is authentic and moving. Pure Malayalam classic.",
+          "verified": true
+        },
+        {
+          "id": 189,
+          "reviewer": "Leela Nair",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Beautiful tragic romance. The sea becomes a character in itself. Karuthamma and Pareekutty's story is unforgettable.",
+          "verified": false
+        },
+        {
+          "id": 190,
+          "reviewer": "Rajesh Pillai",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Masterpiece of Malayalam literature. The cultural tensions and forbidden love are portrayed with great sensitivity.",
+          "verified": true
+        },
+        {
+          "id": 191,
+          "reviewer": "Anitha Kumar",
+          "rating": 4,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 192,
+          "reviewer": "Vijay Menon",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "title": "Balyakalasakhi",
+      "author": "Vaikom Muhammad Basheer",
+      "price": 26.25,
+      "image": "https://m.media-amazon.com/images/I/712JvR1KRrL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Tragic love story between Majeed and Suhra in pre-independent Kerala.",
+      "stock": 26,
+      "rating": 4.5,
+      "pages": 144,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 198,
+          "reviewer": "Anwar Hussain",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Basheer's masterpiece! The innocent childhood love and tragic separation is heart-wrenching. Simple yet powerful storytelling.",
+          "verified": true
+        },
+        {
+          "id": 199,
+          "reviewer": "Rahman Ali",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Beautiful and sad. Basheer captures the purity of first love and the harsh realities of social barriers.",
+          "verified": false
+        },
+        {
+          "id": 200,
+          "reviewer": "Shamshad Begum",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Short but impactful. The emotional depth in such few pages is remarkable. Made me cry.",
+          "verified": true
+        },
+        {
+          "id": 201,
+          "reviewer": "Abdul Kareem",
+          "rating": 4,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 202,
+          "reviewer": "Fatima Beevi",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "title": "Pathummayude Aadu",
+      "author": "Vaikom Muhammad Basheer",
+      "price": 24.38,
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e8/Cover_for_Pathummayude_Aadu.jpg",
+      "category": "Fiction",
+      "description": "Humorous account of Basheer's family life focusing on his sister and her goat.",
+      "stock": 30,
+      "rating": 4.6,
+      "pages": 120,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 203,
+          "reviewer": "Zubair Ahmed",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Basheer's humor at its finest! The goat becomes the star of the story. Hilarious yet touching family dynamics.",
+          "verified": true
+        },
+        {
+          "id": 204,
+          "reviewer": "Najeeb Rahman",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Light-hearted and delightful! Basheer's ability to find humor in everyday situations is unmatched.",
+          "verified": false
+        },
+        {
+          "id": 205,
+          "reviewer": "Safiya Begum",
+          "rating": 4,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 206,
+          "reviewer": "Ibrahim Kutty",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 207,
+          "reviewer": "Ayesha Mohammed",
+          "rating": 4,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "title": "Asuravithu",
+      "author": "M. T. Vasudevan Nair",
+      "price": 33.75,
+      "image": "https://m.media-amazon.com/images/I/51oeleXW4IL.SY342.jpg",
+      "category": "Fiction",
+      "description": "A powerful Malayalam novel exploring the dark depths of human psychology and societal conflicts.",
+      "stock": 15,
+      "rating": 4.6,
+      "pages": 274,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 208,
+          "reviewer": "Gopalakrishnan Nair",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "MT's exploration of human darkness is brilliant. The psychological depth and complexity of characters is unmatched in Malayalam literature.",
+          "verified": true
+        },
+        {
+          "id": 209,
+          "reviewer": "Lakshmi Amma",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Disturbing but compelling. MT doesn't shy away from exploring the uglier aspects of human nature. Heavy but necessary read.",
+          "verified": false
+        },
+        {
+          "id": 210,
+          "reviewer": "Suresh Kumar",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 211,
+          "reviewer": "Radha Devi",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "title": "Oru Sankeerthanam Pole",
+      "author": "Perumbadavam Sreedharan",
+      "price": 35.63,
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e0/Cover_picture_of_the_book_Oru_Sankeerthanam_Pole.jpg",
+      "category": "Fiction",
+      "description": "A Malayalam novel based on the life of Fyodor Dostoevsky and his relationship with Anna Snitkina.",
+      "stock": 20,
+      "rating": 4.7,
+      "pages": 280,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 212,
+          "reviewer": "Vijay Menon",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Beautiful biographical fiction! Sreedharan captures Dostoevsky's genius and his relationship with Anna perfectly. Like reading a hymn.",
+          "verified": true
+        },
+        {
+          "id": 213,
+          "reviewer": "Latha Nair",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "Masterful blend of biography and fiction. The portrayal of the great Russian author's personal struggles is moving.",
+          "verified": false
+        },
+        {
+          "id": 214,
+          "reviewer": "Rajesh Pillai",
+          "rating": 4,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 215,
+          "reviewer": "Saraswathi Amma",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "title": "Mullappooniramulla Pakalukal",
+      "author": "Benyamin",
+      "price": 39.98,
+      "image": "https://m.media-amazon.com/images/I/51YLKzyfnkL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "A poignant Malayalam novel exploring the lives of Gulf migrants and their dreams, struggles, and realities away from home.",
+      "stock": 25,
+      "rating": 4.6,
+      "pages": 380,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 216,
+          "reviewer": "Ramesh Nair",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Benyamin's deep understanding of Gulf migrant life shines through. Every page resonates with truth and emotion.",
+          "verified": true
+        },
+        {
+          "id": 217,
+          "reviewer": "Leela Devi",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Poignant portrayal of displacement and longing. Benyamin captures the migrant experience with sensitivity and realism.",
+          "verified": false
+        },
+        {
+          "id": 218,
+          "reviewer": "Mohan Kumar",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 219,
+          "reviewer": "Anitha Pillai",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "title": "Al Arabian Novel Factory",
+      "author": "Benyamin",
+      "price": 36.25,
+      "image": "https://covers.storytel.com/jpg-640/9789353902230.d53b1c72-aae6-417f-b436-9637e9e16c1c?optimize=high",
+      "category": "Fiction",
+      "description": "Al Arabian Novel Factory is the sequel to Jasmine Days, the story of young radio jockey Sameera Parvin, an immigrant in the city from Pakistan, and her guitar-playing colleague Ali Fardan.",
+      "stock": 22,
+      "rating": 4.4,
+      "pages": 300,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 220,
+          "reviewer": "Sreekumar Nair",
+          "rating": 4,
+          "date": "2024-08-28",
+          "review": "Engaging sequel exploring media, migration, and modern Middle Eastern life. Sameera's journey continues compellingly.",
+          "verified": true
+        },
+        {
+          "id": 221,
+          "reviewer": "Deepa Rajan",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Benyamin's storytelling evolution is evident. The media industry backdrop adds contemporary relevance to migrant narratives.",
+          "verified": false
+        },
+        {
+          "id": 222,
+          "reviewer": "Prakash Kumar",
+          "rating": 4,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 223,
+          "reviewer": "Sarala Menon",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "title": "Ente Katha",
+      "author": "Kamala Surayya (Madhavikutty)",
+      "price": 34.98,
+      "image": "https://rukminim2.flixcart.com/image/300/300/ktszgy80/regionalbooks/f/b/c/ente-katha-original-imag72r7kfguchay.jpeg?q=20&crop=false",
+      "category": "Autobiography",
+      "description": "The autobiography of Madhavikutty (Kamala Das), a bold and deeply personal account of her life and struggles.",
+      "stock": 20,
+      "rating": 4.8,
+      "pages": 228,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 224,
+          "reviewer": "Meera Nair",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Revolutionary autobiography! Madhavikutty's raw honesty and courage to speak her truth is inspiring. Broke many taboos.",
+          "verified": true
+        },
+        {
+          "id": 225,
+          "reviewer": "Rajesh Pillai",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Unflinchingly honest memoir. Her exploration of sexuality, marriage, and identity was groundbreaking for its time.",
+          "verified": false
+        },
+        {
+          "id": 226,
+          "reviewer": "Anjali Kumar",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 227,
+          "reviewer": "Vijay Menon",
+          "rating": 3,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 228,
+          "reviewer": "Lakshmi Devi",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "title": "Sugandhi Enna Andal Devanayaki",
+      "author": "T. D. Ramakrishnan",
+      "price": 38.13,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYZblCoVKvpmsbXVnEDBSXtmIDC4OSD0LeA&s",
+      "category": "Fiction",
+      "description": "A modern Malayalam classic exploring memory, politics, and history through the mysterious Sugandhi.",
+      "stock": 18,
+      "rating": 4.7,
+      "pages": 420,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 229,
+          "reviewer": "Suresh Kumar",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Ramakrishnan's masterpiece! The interweaving of personal memory with political history is brilliant. Sugandhi remains enigmatic.",
+          "verified": true
+        },
+        {
+          "id": 230,
+          "reviewer": "Leela Nair",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Complex narrative structure but rewarding. The exploration of Kerala's political landscape through personal stories is engaging.",
+          "verified": false
+        },
+        {
+          "id": 231,
+          "reviewer": "Mohan Das",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 232,
+          "reviewer": "Anitha Pillai",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "title": "Oru Desathinte Katha",
+      "author": "S. K. Pottekkatt",
+      "price": 37.48,
+      "image": "https://m.media-amazon.com/images/I/51fcdNS+XJL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "A semi-autobiographical novel about growing up in Kerala, blending history, imagination, and memory.",
+      "stock": 25,
+      "rating": 4.6,
+      "pages": 520,
+      "language": "Malayalam",
+      "isActive": true,
+      "reviews": [
+        {
+          "id": 233,
+          "reviewer": "Gopalakrishnan",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Pottekkatt's magnum opus! Beautiful blend of autobiography and fiction capturing the essence of old Kerala.",
+          "verified": true
+        },
+        {
+          "id": 234,
+          "reviewer": "Lalitha Menon",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Nostalgic journey through time. The historical details and personal memories create a rich tapestry of Kerala life.",
+          "verified": false
+        },
+        {
+          "id": 235,
+          "reviewer": "Ravi Chandran",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 236,
+          "reviewer": "Geetha Kumar",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "title": "Mayyazhippuzhayude Theerangalil",
+      "author": "M. Mukundan",
+      "price": 13.5,
+      "image": "https://m.media-amazon.com/images/I/81mNpcVveJL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "A landmark novel set in Mahé, capturing the socio-political changes of a small town under French colonial rule.",
+      "stock": 22,
+      "rating": 4.6,
+      "pages": 378,
+      "language": "Malayalam",
+      "reviews": [
+        {
+          "id": 237,
+          "reviewer": "ColonialHistory",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Mukundan's portrayal of Mahé under French rule is extraordinary. The riverside setting becomes a character itself.",
+          "verified": true
+        },
+        {
+          "id": 238,
+          "reviewer": "FrenchIndia",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Unique perspective on colonial India. The small-town dynamics and political changes are beautifully captured.",
+          "verified": false
+        },
+        {
+          "id": 239,
+          "reviewer": "RiversideStory",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 240,
+          "reviewer": "MaheChronicle",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "title": "Randidangazhi",
+      "author": "Thakazhi Sivasankara Pillai",
+      "price": 12.75,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfQrF8fZwB6z0Oq7eTunHMEopdX-fvziVd1A&s",
+      "category": "Fiction",
+      "description": "A socialist classic portraying the plight of agricultural labourers in Kerala.",
+      "stock": 24,
+      "rating": 4.5,
+      "pages": 312,
+      "language": "Malayalam",
+      "reviews": [
+        {
+          "id": 241,
+          "reviewer": "SocialistFiction",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Thakazhi's socialist masterpiece! The portrayal of agricultural workers' struggles is both powerful and heartbreaking.",
+          "verified": true
+        },
+        {
+          "id": 242,
+          "reviewer": "WorkersRights",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Important social document disguised as fiction. The class struggles depicted are still relevant today.",
+          "verified": false
+        },
+        {
+          "id": 243,
+          "reviewer": "AgriculturalLife",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 244,
+          "reviewer": "ClassStruggle",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "title": "Odayil Ninnu",
+      "author": "P. Kesavadev",
+      "price": 13.25,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr3fd4Oq8xvZyQ7bo_RHWMDTznrqDJxTj9IQ&s",
+      "category": "Fiction",
+      "description": "A powerful Malayalam novel about Pappu, a rickshaw puller, symbolizing struggle, resilience, and dignity of the working class.",
+      "stock": 28,
+      "rating": 4.6,
+      "pages": 276,
+      "language": "Malayalam",
+      "reviews": [
+        {
+          "id": 245,
+          "reviewer": "WorkingClass",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Kesavadev's masterpiece about human dignity! Pappu's story represents every struggling worker. Deeply moving and relevant.",
+          "verified": true
+        },
+        {
+          "id": 246,
+          "reviewer": "UrbanStruggle",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "The rickshaw puller's life portrayed with such authenticity. A testament to human resilience against all odds.",
+          "verified": false
+        },
+        {
+          "id": 247,
+          "reviewer": "PappuStory",
+          "rating": 4,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 248,
+          "reviewer": "UrbanRealism",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "price": 22.99,
+      "image": "https://pictures.abebooks.com/inventory/22547991924.jpg",
+      "category": "Fiction",
+      "description": "The multi-generational story of the Buendía family in Macondo.",
+      "stock": 20,
+      "rating": 4.8,
+      "pages": 417,
+      "language": "Spanish",
+      "reviews": [
+        {
+          "id": 249,
+          "reviewer": "MagicalRealism",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "García Márquez's masterpiece! The magical realism and cyclical narrative are hypnotizing. A literary landmark.",
+          "verified": true
+        },
+        {
+          "id": 250,
+          "reviewer": "LatinAmericanLit",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "Epic family saga spanning generations. The blend of history and fantasy is extraordinary. Deserved the Nobel Prize.",
+          "verified": false
+        },
+        {
+          "id": 251,
+          "reviewer": "MacondoLife",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Márquez creates an entire world in Macondo. The Buendía family becomes universal. Absolutely mesmerizing.",
+          "verified": true
+        },
+        {
+          "id": 252,
+          "reviewer": "GenerationalSaga",
+          "rating": 4,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 253,
+          "reviewer": "ColombianLiterature",
+          "rating": 5,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "price": 16.5,
+      "image": "https://m.media-amazon.com/images/I/81QSukPYvML.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Story of friendship, betrayal, and redemption set in Afghanistan.",
+      "stock": 25,
+      "rating": 4.7,
+      "pages": 371,
+      "language": "English",
+      "reviews": [
+        {
+          "id": 254,
+          "reviewer": "AfghanHistory",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Heartbreaking and beautiful. Hosseini's portrayal of Afghanistan and the friendship between Amir and Hassan is unforgettable.",
+          "verified": true
+        },
+        {
+          "id": 255,
+          "reviewer": "RedemptionStory",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Powerful story of guilt, betrayal, and the possibility of redemption. Made me understand Afghanistan's tragedy better.",
+          "verified": false
+        },
+        {
+          "id": 256,
+          "reviewer": "FriendshipTragedy",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Emotional rollercoaster. The kite flying scenes are beautifully written. Hassan's loyalty is heartbreaking.",
+          "verified": true
+        },
+        {
+          "id": 257,
+          "reviewer": "MiddleEasternFiction",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 258,
+          "reviewer": "GuiltRedemption",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "title": "Pachinko",
+      "author": "Min Jin Lee",
+      "price": 19.99,
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/2f/Pachinko_%28novel%29.jpg",
+      "category": "Fiction",
+      "description": "Saga about four generations of a Korean family in Japan.",
+      "stock": 18,
+      "rating": 4.6,
+      "pages": 490,
+      "language": "English",
+      "reviews": [
+        {
+          "id": 259,
+          "reviewer": "KoreanDiaspora",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Epic generational saga! Lee's portrayal of Korean immigrants in Japan is both heartbreaking and inspiring. Beautifully written.",
+          "verified": true
+        },
+        {
+          "id": 260,
+          "reviewer": "FamilyEpic",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Sweeping narrative across generations. The discrimination and resilience themes are powerfully depicted. Couldn't put it down.",
+          "verified": false
+        },
+        {
+          "id": 261,
+          "reviewer": "ImmigrantExperience",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Long but rewarding read. The historical context of Korea-Japan relations adds depth to personal stories.",
+          "verified": true
+        },
+        {
+          "id": 262,
+          "reviewer": "GenerationalStory",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 263,
+          "reviewer": "JapanKorea",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "price": 19.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNOwtfbsc2AuqPuiU6bRh5knjvd8FgHLIfTw&s",
+      "category": "Fiction",
+      "description": "Psychological thriller about a poor ex-student who murders a pawnbroker and grapples with guilt and redemption in 19th-century St. Petersburg.",
+      "stock": 22,
+      "rating": 4.8,
+      "pages": 430,
+      "language": "Russian",
+      "reviews": [
+        {
+          "id": 264,
+          "reviewer": "RussianClassics",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Dostoevsky's psychological masterpiece! Raskolnikov's mental torment is brilliantly portrayed. A profound exploration of morality.",
+          "verified": true
+        },
+        {
+          "id": 265,
+          "reviewer": "PsychologicalThriller",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "The guilt and redemption themes are timeless. Dostoevsky's understanding of human psychology is unmatched.",
+          "verified": false
+        },
+        {
+          "id": 266,
+          "reviewer": "MoralPhilosophy",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "Heavy but rewarding. The cat-and-mouse game between Raskolnikov and Porfiry is gripping. Classic for a reason.",
+          "verified": true
+        },
+        {
+          "id": 267,
+          "reviewer": "GuiltConscience",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 268,
+          "reviewer": "StPetersburg",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "title": "The White Tiger",
+      "author": "Aravind Adiga",
+      "price": 15.99,
+      "image": "https://m.media-amazon.com/images/I/81TQpJPgUtL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Darkly comic novel about class struggle in modern India.",
+      "stock": 19,
+      "rating": 4.3,
+      "pages": 321,
+      "language": "English",
+      "reviews": [
+        {
+          "id": 269,
+          "reviewer": "ModernIndia",
+          "rating": 5,
+          "date": "2024-08-30",
+          "review": "Adiga's dark satire of Indian society is brilliant! Balram's transformation from servant to entrepreneur is gripping and disturbing.",
+          "verified": true
+        },
+        {
+          "id": 270,
+          "reviewer": "ClassStruggle",
+          "rating": 4,
+          "date": "2024-08-25",
+          "review": "Sharp social commentary wrapped in dark humor. The corruption and inequality themes are brutally honest.",
+          "verified": false
+        },
+        {
+          "id": 271,
+          "reviewer": "IndianSatire",
+          "rating": 4,
+          "date": "2024-08-22",
+          "review": "Uncomfortable truths about contemporary India. Balram's voice is cynical but compelling.",
+          "verified": true
+        },
+        {
+          "id": 272,
+          "reviewer": "EntrepreneurStory",
+          "rating": 3,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 273,
+          "reviewer": "DarkComedy",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "title": "The Namesake",
+      "author": "Jhumpa Lahiri",
+      "price": 18.25,
+      "image": "https://upload.wikimedia.org/wikipedia/en/4/4b/The_Namesake.gif",
+      "category": "Fiction",
+      "description": "Story of cultural identity and immigrant experience of Bengali family in America.",
+      "stock": 21,
+      "rating": 4.4,
+      "pages": 291,
+      "language": "English",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Ananya Roy",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "Beautiful portrayal of immigrant life and identity.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Ravi Kumar",
+          "rating": 4,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 3,
+          "reviewer": "Priya Sharma",
+          "rating": 5,
+          "date": "2024-08-25",
+          "review": "The emotional depth of the characters is incredible.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Aditya Singh",
+          "rating": 4,
+          "date": "2024-09-01",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 5,
+          "reviewer": "Sonal Mehta",
+          "rating": 5,
+          "date": "2024-09-05",
+          "review": "A story that lingers in your mind for days.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "title": "The Palace of Illusions",
+      "author": "Chitra Banerjee Divakaruni",
+      "price": 20.5,
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/1f/The_Palace_of_Illusions.jpg",
+      "category": "Fiction",
+      "description": "Mahabharata retold from Draupadi's perspective.",
+      "stock": 16,
+      "rating": 4.6,
+      "pages": 360,
+      "language": "English",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Meera Nair",
+          "rating": 5,
+          "date": "2024-07-12",
+          "review": "A refreshing perspective on an epic tale.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Karan Gupta",
+          "rating": 4,
+          "date": "2024-07-18",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Aisha Khan",
+          "rating": 5,
+          "date": "2024-07-22",
+          "review": "The writing is lyrical and captivating.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Siddharth Joshi",
+          "rating": 4,
+          "date": "2024-08-01",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Nandita Reddy",
+          "rating": 5,
+          "date": "2024-08-05",
+          "review": "Draupadi's voice felt alive and authentic.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "title": "My Brilliant Friend",
+      "author": "Elena Ferrante",
+      "price": 19.25,
+      "image": "https://knygynas.biz/cdn/shop/products/mybrilliantfriend_grande.jpg?v=1629897435",
+      "category": "Fiction",
+      "description": "First book in Neapolitan Novels series about friendship in post-war Italy.",
+      "stock": 17,
+      "rating": 4.5,
+      "pages": 331,
+      "language": "Italian",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Giulia Rossi",
+          "rating": 5,
+          "date": "2024-07-10",
+          "review": "A powerful story of friendship and growth.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Marco Bianchi",
+          "rating": 4,
+          "date": "2024-07-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Sofia Conti",
+          "rating": 5,
+          "date": "2024-07-20",
+          "review": "The characters feel alive and real.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Luca Romano",
+          "rating": 4,
+          "date": "2024-08-01",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Chiara Esposito",
+          "rating": 5,
+          "date": "2024-08-05",
+          "review": "Ferrante's writing is gripping and honest.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "title": "The Vegetarian",
+      "author": "Han Kang",
+      "price": 16.99,
+      "image": "https://upload.wikimedia.org/wikipedia/en/5/5a/The_vegetarian_-_han_kang.jpg",
+      "category": "Fiction",
+      "description": "Psychological novel about a woman who decides to stop eating meat.",
+      "stock": 20,
+      "rating": 4.2,
+      "pages": 188,
+      "language": "Korean",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Sun-hee Kim",
+          "rating": 5,
+          "date": "2024-07-05",
+          "review": "Deep and disturbing, beautifully written.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Jin Woo",
+          "rating": 4,
+          "date": "2024-07-10",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Min Ji",
+          "rating": 4,
+          "date": "2024-07-15",
+          "review": "A haunting tale about choice and autonomy.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Hye Jin",
+          "rating": 4,
+          "date": "2024-08-01",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Dong Hoon",
+          "rating": 5,
+          "date": "2024-08-05",
+          "review": "Emotionally intense and thought-provoking.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "title": "The Trial",
+      "author": "Franz Kafka",
+      "price": 14.5,
+      "image": "https://warmdayswillnevercease.wordpress.com/wp-content/uploads/2021/10/the-trial.jpg",
+      "category": "Fiction",
+      "description": "Novel about a man arrested by a remote, inaccessible authority.",
+      "stock": 28,
+      "rating": 4.4,
+      "pages": 255,
+      "language": "German",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Hans Muller",
+          "rating": 5,
+          "date": "2024-07-12",
+          "review": "Kafka's surreal world is chilling and fascinating.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Lena Fischer",
+          "rating": 4,
+          "date": "2024-07-18",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Karl Schmidt",
+          "rating": 5,
+          "date": "2024-07-22",
+          "review": "Timeless exploration of bureaucracy and fear.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Anna Weber",
+          "rating": 4,
+          "date": "2024-08-01",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Peter Wagner",
+          "rating": 5,
+          "date": "2024-08-05",
+          "review": "Every page makes you question reality.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "title": "The Little Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "price": 12.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoL_JMMIDIZXa8qDW-KAblWAGRw5bhf_L0Bw&s",
+      "category": "Fiction",
+      "description": "Poetic tale about a young prince who visits various planets.",
+      "stock": 35,
+      "rating": 4.8,
+      "pages": 96,
+      "language": "French",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Claire Dupont",
+          "rating": 5,
+          "date": "2024-06-10",
+          "review": "Timeless and magical story.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Jean Martin",
+          "rating": 5,
+          "date": "2024-06-12",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Sophie Bernard",
+          "rating": 5,
+          "date": "2024-06-15",
+          "review": "A tale that touches both children and adults.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Louis Leroy",
+          "rating": 4,
+          "date": "2024-06-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Isabelle Petit",
+          "rating": 5,
+          "date": "2024-06-25",
+          "review": "Beautifully written and illustrated.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "63",
+      "title": "Norwegian Wood",
+      "author": "Haruki Murakami",
+      "price": 18.75,
+      "image": "https://m.media-amazon.com/images/I/81zqVhvbHbL.jpg",
+      "category": "Fiction",
+      "description": "Story of loss and sexuality set in 1960s Tokyo.",
+      "stock": 24,
+      "rating": 4.3,
+      "pages": 296,
+      "language": "Japanese",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Yuki Tanaka",
+          "rating": 5,
+          "date": "2024-07-05",
+          "review": "Haunting and beautifully melancholic.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Hiroshi Sato",
+          "rating": 4,
+          "date": "2024-07-10",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Aya Nakamura",
+          "rating": 5,
+          "date": "2024-07-15",
+          "review": "Emotional and deeply moving.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Kenji Mori",
+          "rating": 4,
+          "date": "2024-07-20",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Mai Yoshida",
+          "rating": 5,
+          "date": "2024-07-25",
+          "review": "Murakami's writing is magical.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "title": "The House of the Spirits",
+      "author": "Isabel Allende",
+      "price": 20.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEbd-KjClSZhfeUkN1Z7RgK0Q5GgKba6GT7w&s",
+      "category": "Fiction",
+      "description": "Multi-generational story of the Trueba family in Chile.",
+      "stock": 19,
+      "rating": 4.6,
+      "pages": 433,
+      "language": "Spanish",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Isabella Martinez",
+          "rating": 5,
+          "date": "2024-07-10",
+          "review": "Beautifully written saga of love and politics.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Juan Perez",
+          "rating": 4,
+          "date": "2024-07-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Maria Gonzalez",
+          "rating": 5,
+          "date": "2024-07-20",
+          "review": "The story is immersive and emotional.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Carlos Lopez",
+          "rating": 4,
+          "date": "2024-07-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Sofia Ramirez",
+          "rating": 5,
+          "date": "2024-07-30",
+          "review": "Characters feel alive across generations.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "title": "The Wind-Up Bird Chronicle",
+      "author": "Haruki Murakami",
+      "price": 22.5,
+      "image": "https://pagesandcoffeecups.com/wp-content/uploads/2019/06/the-wind-up-bird-chronicle-haruki-murakami-1.jpg",
+      "category": "Fiction",
+      "description": "Novel blending realism with surreal in contemporary Japan.",
+      "stock": 15,
+      "rating": 4.5,
+      "pages": 607,
+      "language": "Japanese",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Akira Yamada",
+          "rating": 5,
+          "date": "2024-06-10",
+          "review": "Surreal and compelling story.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Hiro Tanaka",
+          "rating": 4,
+          "date": "2024-06-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Emi Suzuki",
+          "rating": 5,
+          "date": "2024-06-20",
+          "review": "Murakami at his enigmatic best.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Takeshi Ito",
+          "rating": 4,
+          "date": "2024-06-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Yoko Sato",
+          "rating": 5,
+          "date": "2024-06-30",
+          "review": "Twists and turns kept me hooked.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "title": "The Reader",
+      "author": "Bernhard Schlink",
+      "price": 16.25,
+      "image": "https://www.madrasshoppe.com/128889-home_default/the-reader-schlink.jpg",
+      "category": "Fiction",
+      "description": "Story about teenage boy's affair with older woman in post-war Germany.",
+      "stock": 21,
+      "rating": 4.4,
+      "pages": 218,
+      "language": "German",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Anna Becker",
+          "rating": 5,
+          "date": "2024-05-10",
+          "review": "Deeply moving exploration of guilt and love.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Michael Schmidt",
+          "rating": 4,
+          "date": "2024-05-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Lena Fischer",
+          "rating": 5,
+          "date": "2024-05-20",
+          "review": "Complex characters and moral dilemmas.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Hans Weber",
+          "rating": 4,
+          "date": "2024-05-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Julia Wagner",
+          "rating": 5,
+          "date": "2024-05-30",
+          "review": "Beautifully written and thought-provoking.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "title": "The Three-Body Problem",
+      "author": "Liu Cixin",
+      "price": 17.5,
+      "image": "https://m.media-amazon.com/images/I/91DUejN+hAL.jpg",
+      "category": "Fiction",
+      "description": "Science fiction novel about humanity's first contact with aliens.",
+      "stock": 22,
+      "rating": 4.5,
+      "pages": 400,
+      "language": "Chinese",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Li Wei",
+          "rating": 5,
+          "date": "2024-04-10",
+          "review": "Sci-fi masterpiece with brilliant ideas.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Chen Xi",
+          "rating": 4,
+          "date": "2024-04-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Zhang Lei",
+          "rating": 5,
+          "date": "2024-04-20",
+          "review": "Complex and thrilling story.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Wang Ming",
+          "rating": 4,
+          "date": "2024-04-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Li Na",
+          "rating": 5,
+          "date": "2024-04-30",
+          "review": "Hard to put down, truly imaginative.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "title": "The Devotion of Suspect X",
+      "author": "Keigo Higashino",
+      "price": 15.99,
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327990922i/13446688.jpg",
+      "category": "Fiction",
+      "description": "Psychological thriller about mathematical genius covering up murder.",
+      "stock": 20,
+      "rating": 4.6,
+      "pages": 374,
+      "language": "Japanese",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Taro Yamada",
+          "rating": 5,
+          "date": "2024-03-10",
+          "review": "Intriguing and well-plotted thriller.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Kenji Suzuki",
+          "rating": 4,
+          "date": "2024-03-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Akiko Tanaka",
+          "rating": 5,
+          "date": "2024-03-20",
+          "review": "Genius plot twists and suspense.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Hiroshi Mori",
+          "rating": 4,
+          "date": "2024-03-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Yumi Kobayashi",
+          "rating": 5,
+          "date": "2024-03-30",
+          "review": "Highly recommended for mystery lovers.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "title": "The Unbearable Lightness of Being",
+      "author": "Milan Kundera",
+      "price": 18.25,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3wWkKjPQ_iY09Dzf1noB9OxqksIXqHvZTg&s",
+      "category": "Fiction",
+      "description": "Novel exploring love, life, and politics in Communist Czechoslovakia.",
+      "stock": 16,
+      "rating": 4.4,
+      "pages": 320,
+      "language": "Czech",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Pavel Novak",
+          "rating": 5,
+          "date": "2024-02-10",
+          "review": "Philosophical and poetic exploration of life.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Lucie Svobodova",
+          "rating": 4,
+          "date": "2024-02-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Milan Dvorak",
+          "rating": 5,
+          "date": "2024-02-20",
+          "review": "Beautifully written and thought-provoking.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Eva Horakova",
+          "rating": 4,
+          "date": "2024-02-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Jan Prochazka",
+          "rating": 5,
+          "date": "2024-02-28",
+          "review": "A book that lingers in the mind.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "title": "Don Quixote",
+      "author": "Miguel de Cervantes",
+      "price": 15.99,
+      "image": "https://m.media-amazon.com/images/I/71vv11UPyuL.UF894,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "Classic novel about an idealistic knight and his pragmatic squire.",
+      "stock": 18,
+      "rating": 4.7,
+      "pages": 863,
+      "language": "Spanish",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Jose Martinez",
+          "rating": 5,
+          "date": "2024-01-10",
+          "review": "Timeless classic with humor and depth.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Ana Lopez",
+          "rating": 4,
+          "date": "2024-01-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Miguel Torres",
+          "rating": 5,
+          "date": "2024-01-20",
+          "review": "Cervantes' masterpiece is a joy to read.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Lucia Fernandez",
+          "rating": 4,
+          "date": "2024-01-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Pedro Gonzalez",
+          "rating": 5,
+          "date": "2024-01-30",
+          "review": "Epic story of adventure and idealism.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "title": "Les Misérables",
+      "author": "Victor Hugo",
+      "price": 22.99,
+      "image": "https://m.media-amazon.com/images/I/91teZUyg4QS.SY342.jpg",
+      "category": "Fiction",
+      "description": "Epic French novel following ex-convict Jean Valjean's journey of redemption in 19th-century France. Explores justice, love, and revolution.",
+      "stock": 18,
+      "rating": 4.8,
+      "pages": 1463,
+      "language": "French",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Pierre Dubois",
+          "rating": 5,
+          "date": "2023-12-10",
+          "review": "Epic tale of love, justice, and revolution.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Marie Lefevre",
+          "rating": 5,
+          "date": "2023-12-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Louis Moreau",
+          "rating": 5,
+          "date": "2023-12-20",
+          "review": "Characters and story are unforgettable.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Claire Fontaine",
+          "rating": 4,
+          "date": "2023-12-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Jean-Claude Bernard",
+          "rating": 5,
+          "date": "2023-12-30",
+          "review": "Hugo's masterpiece lives up to its fame.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "72",
+      "title": "Fihi Ma Fihi",
+      "author": "Jalaluddin Rumi",
+      "price": 17.5,
+      "image": "https://s3.ap-south-1.amazonaws.com/storage.commonfolks.in/docs/products/images_full/discourses-of-rumi-fihi-ma-fihi_FrontImage_177.jpg",
+      "category": "Non-Fiction",
+      "description": "Rumi's spiritual discourses on divine love and the soul's journey. A foundational text of Sufi mysticism and philosophy.",
+      "stock": 14,
+      "rating": 4.7,
+      "pages": 288,
+      "language": "Persian",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Ali Reza",
+          "rating": 5,
+          "date": "2023-11-10",
+          "review": "Soulful and enlightening teachings.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Fatima Zahra",
+          "rating": 5,
+          "date": "2023-11-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Omar Khalid",
+          "rating": 5,
+          "date": "2023-11-20",
+          "review": "Rumi's wisdom shines through every page.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Leila Abbas",
+          "rating": 4,
+          "date": "2023-11-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Sami Rahman",
+          "rating": 5,
+          "date": "2023-11-30",
+          "review": "A book that nurtures the soul.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "73",
+      "title": "Oru Kudayum Kunju Pengalum",
+      "author": "Muttathu Varki",
+      "price": 12.99,
+      "image": "https://m.media-amazon.com/images/I/71N6vDe2THL.UF1000,1000_QL80.jpg",
+      "category": "Fiction",
+      "description": "The novel tells the story of heart touching story of love and affection between two siblings , a 10-11 years old boy and his younger sister. This book depicts the meaning of life, the value of honesty and Love.",
+      "stock": 16,
+      "rating": 4.3,
+      "pages": 128,
+      "language": "Malayalam",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Anand Menon",
+          "rating": 5,
+          "date": "2023-10-10",
+          "review": "Heartwarming story of family and love.",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Priya Nair",
+          "rating": 4,
+          "date": "2023-10-15",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Ravi Varma",
+          "rating": 5,
+          "date": "2023-10-20",
+          "review": "Beautiful portrayal of sibling bond.",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Leela George",
+          "rating": 4,
+          "date": "2023-10-25",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Suhail KP",
+          "rating": 5,
+          "date": "2023-10-30",
+          "review": "Emotional and touching narrative.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "74",
+      "title": "Ponniyin Selvan : malayalam trans",
+      "originalTitle": "Ponniyin Selvan",
+      "author": "Kalki Krishnamurthi",
+      "translator": "രാജീവ് രവി",
+      "language": "Malayalam",
+      "image": "https://dcbookstore.com/uploads/product/images/8003389344874-WhatsApp-Image-2022-05-18-at-3.45.42-PM.jpeg",
+      "description": "ചോള സാമ്രാജ്യത്തിന്റെ സുവർണ്ണയുഗത്തെ പശ്ചാത്തലമാക്കിയുള്ള കൽകി കൃഷ്ണമൂർത്തിയുടെ അമര കൃതിയായ പൊന്നിയിൻ സെൽവൻ ഇതാ മലയാളത്തിൽ. രാജകീയ ഉന്മേഷങ്ങൾ, സാഹസിക യാത്രകൾ, രാഷ്ട്രീയ സംഭവങ്ങൾ എന്നിവയുടെ നേർക്കാഴ്ച്ചയാണ് ഈ ഗ്രന്ഥം.",
+      "price": 23.99,
+      "originalPrice": 2100,
+      "discount": 28,
+      "currency": "INR",
+      "pages": 2400,
+      "volumes": 5,
+      "stock": 0,
+      "publishedYear": 2022,
+      "isbn": "978-81-8267-123-4",
+      "coverType": "Hardcover",
+      "category": "Fiction",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "രാജീവ് കുമാർ",
+          "date": "2023-01-15",
+          "rating": 5,
+          "comment": "ഒരു കലാസൃഷ്ടിയെ മറ്റൊരു ഭാഷയിലേക്ക് മാറ്റിയെടുക്കുമ്പോൾ അതിന്റെ ആത്മാവ് നഷ്ടപ്പെടാതിരിക്കേണ്ടത് വളരെ പ്രധാനമാണ്. ഈ തർജ്ജമ അതിൽ വിജയിച്ചിരിക്കുന്നു."
+        },
+        {
+          "user": "സീമ എസ്",
+          "date": "2023-03-02",
+          "rating": 5,
+          "comment": "തമിഴിൽ വായിച്ചപ്പോൾ ഉണ്ടായിരുന്ന അനുഭവം തന്നെ മലയാളത്തിലും. തർജ്ജമക്കാരൻ ശ്രദ്ധിച്ചിരിക്കുന്നു. പുസ്തകത്തിന്റെ ഗുണനിലവാരം മികച്ചതാണ്."
+        },
+        {
+          "user": "മുരളീധരൻ",
+          "date": "2022-11-30",
+          "rating": 4,
+          "comment": "ചരിത്രം രസിക്കുന്ന എല്ലാവരും വായിക്കേണ്ട ഒരു ഗ്രന്ഥം. ചോള ചക്രവർത്തിമാരുടെ കാലം മലയാളത്തിൽ മനസ്സിലാക്കാൻ സഹായിക്കുന്നു."
+        }
+      ],
+      "inStock": true,
+      "features": [
+        "5 Volume Set",
+        "High Quality Paper",
+        "Premium Hard Cover",
+        "Bookmark Ribbon"
+      ],
+      "shipping": {
+        "deliveryTime": "3-5 days",
+        "freeShipping": true,
+        "returnPolicy": 10
+      }
+    },
+    {
+      "id": "75",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 14.99,
+      "image": "https://m.media-amazon.com/images/I/81gepf1eMqL.jpg",
+      "category": "Fiction",
+      "description": "Story of racial injustice and childhood innocence in American South.",
+      "stock": 40,
+      "rating": 4.8,
+      "pages": 324,
+      "language": "English",
+      "reviews": [
+        {
+          "id": 12,
+          "reviewer": "PageTurner",
+          "rating": 5,
+          "date": "2024-08-03",
+          "review": "A timeless classic that tackles difficult themes with grace. Scout's innocence contrasts beautifully with the harsh realities.",
+          "verified": false
+        },
+        {
+          "id": 13,
+          "reviewer": "David Rodriguez",
+          "rating": 5,
+          "date": "2024-07-30",
+          "review": "Masterfully written. Atticus Finch remains one of literature's greatest moral compasses. Essential reading.",
+          "verified": true
+        },
+        {
+          "id": 14,
+          "reviewer": "LiteraryLion",
+          "rating": 4,
+          "date": "2024-06-25",
+          "review": "Powerful story about justice and morality. The courtroom scenes are particularly gripping.",
+          "verified": false
+        },
+        {
+          "id": 15,
+          "reviewer": "BookClub Jane",
+          "rating": 5,
+          "date": "2024-08-20",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 16,
+          "reviewer": "StudentReader",
+          "rating": 4,
+          "date": "2024-08-12",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 17,
+          "reviewer": "Maria Santos",
+          "rating": 5,
+          "date": "2024-07-25",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "76",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "price": 12.99,
+      "image": "https://m.media-amazon.com/images/I/81bsw6fnUiL.jpg",
+      "category": "Non-Fiction",
+      "description": "A groundbreaking personal finance book that contrasts two approaches to money, teaching financial independence and wealth-building habits.",
+      "stock": 28,
+      "rating": 4.6,
+      "pages": 336,
+      "language": "English",
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "David Carter",
+          "rating": 5,
+          "date": "2024-08-18",
+          "review": "Changed the way I think about money forever. Must-read for everyone!",
+          "verified": true
+        },
+        {
+          "id": 2,
+          "reviewer": "Sophia Williams",
+          "rating": 4,
+          "date": "2024-09-02",
+          "review": "Great insights, though some examples are a bit dated. Still very useful.",
+          "verified": true
+        },
+        {
+          "id": 3,
+          "reviewer": "Noah Anderson",
+          "rating": 5,
+          "date": "2024-08-21",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 4,
+          "reviewer": "Isabella Martinez",
+          "rating": 4,
+          "date": "2024-09-03",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 5,
+          "reviewer": "Benjamin Lee",
+          "rating": 5,
+          "date": "2024-08-19",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 6,
+          "reviewer": "Emma Thompson",
+          "rating": 5,
+          "date": "2024-08-28",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 7,
+          "reviewer": "Lucas Robinson",
+          "rating": 5,
+          "date": "2024-08-16",
+          "review": "",
+          "verified": false
+        },
+        {
+          "id": 8,
+          "reviewer": "Amelia White",
+          "rating": 4,
+          "date": "2024-08-30",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 9,
+          "reviewer": "William Harris",
+          "rating": 5,
+          "date": "2024-08-27",
+          "review": "",
+          "verified": true
+        },
+        {
+          "id": 10,
+          "reviewer": "Charlotte Taylor",
+          "rating": 5,
+          "date": "2024-08-15",
+          "review": "",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "9728",
+      "title": "Kunjaniyude prayanam",
+      "author": "aimutty",
+      "price": 999,
+      "stock": 9,
+      "category": "travel",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOkOK8W_iAA8KP5XN3n5o7kR5l_Uuf-88UQ&s",
+      "description": "Ulkam chuttunna kunjani . Thudarnnu vaayikku , only on LitVerse",
+      "pages": 350,
+      "language": "multiple languages",
+      "rating": 5,
+      "reviews": []
+    },
+    {
+      "id": "7c2a",
+      "title": "Kanarante Veeragadha",
+      "author": "Veerakunjanie Thalai Konda Koparakesari Kanaran",
+      "price": 99.99,
+      "stock": 9,
+      "category": "Veeragadha",
+      "image": "https://t3.ftcdn.net/jpg/05/11/31/94/360_F_511319487_Ds7uFJI24HeD4s6rY8ncFK4BNvxsVcUg.jpg",
+      "description": "Lokam kanda athimahonnatha veera soora parakrami Arulmozhi Varma Kanarante mahajeevithakavyam",
+      "pages": 1111,
+      "language": "veeraksara",
+      "rating": 5,
+      "reviews": []
+    },
+    {
+      "id": "7c2a1",
+      "title": "Oliver Twist",
+      "author": "dicj=kense",
+      "price": "54",
+      "stock": "9",
+      "category": "Fiction",
+      "image": "https://m.media-amazon.com/images/I/81ZtAPCqyGL.UF1000,1000_QL80.jpg",
+      "description": "a novel",
+      "pages": "345",
+      "language": "English",
+      "rating": "4",
+      "reviews": []
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "mail": "admin@gmail.com",
+      "password": "admin@123",
+      "role": "admin",
+      "isBlock": false
+    },
+    {
+      "id": "4bb8",
+      "username": "anwar ",
+      "mail": "anwar@gmail.com",
+      "password": "anwar123",
+      "role": "user",
+      "isBlock": false,
+      "date": "05/09/2025",
+      "cart": [],
+      "wishlist": [
+        {
+          "id": "3",
+          "title": "Harry Potter and the Philosopher's Stone",
+          "author": "J.K. Rowling",
+          "price": "22.32",
+          "image": "https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg",
+          "category": "Fiction",
+          "description": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts and the boy who lived.",
+          "stock": 10,
+          "rating": 4.9,
+          "pages": 336,
+          "language": "English",
+          "isActive": true
+        }
+      ],
+      "orders": [
+        {
+          "id": "1",
+          "orderStatus": "shipped",
+          "date": "10/09/2025",
+          "total": 22,
+          "address": {
+            "username": "Anwar Swadiq",
+            "email": "anwar@gmail.com",
+            "phone": "8086785008",
+            "address": "kolikkal",
+            "pin": "673574"
+          },
+          "products": [
+            {
+              "id": "3",
+              "title": "Harry Potter and the Philosopher's Stone",
+              "author": "J.K. Rowling",
+              "price": "22.32",
+              "image": "https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg",
+              "category": "Fiction",
+              "description": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts and the boy who lived.",
+              "stock": 10,
+              "rating": 4.9,
+              "pages": 336,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "orderStatus": "pending",
+          "date": "10/09/2025",
+          "total": 22,
+          "address": {
+            "username": "abcd",
+            "email": "john@gmail.com",
+            "phone": "q425352",
+            "address": "jkhjgfgd",
+            "pin": "673574"
+          },
+          "products": [
+            {
+              "id": "3",
+              "title": "Harry Potter and the Philosopher's Stone",
+              "author": "J.K. Rowling",
+              "price": "22.03",
+              "image": "https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg",
+              "category": "Fiction",
+              "description": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts and the boy who lived.",
+              "stock": 9,
+              "rating": 4.9,
+              "pages": 336,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            }
+          ]
+        }
+      ],
+      "pasword": "anwar123"
+    },
+    {
+      "id": "ec6f",
+      "username": "John Doe",
+      "mail": "john@gmail.com",
+      "password": "john123",
+      "role": "user",
+      "isBlock": true,
+      "date": "08/09/2025",
+      "cart": [],
+      "wishlist": [
+        {
+          "id": "26",
+          "title": "Educated",
+          "author": "Tara Westover",
+          "price": 49.97,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrTTESsJegCkuU5wAov3x_07gymlZEvrzepw&s",
+          "category": "Non-Fiction",
+          "description": "A memoir about a woman who leaves her survivalist family and goes on to earn a PhD from Cambridge University.",
+          "stock": 33,
+          "rating": 4.8,
+          "pages": 334,
+          "language": "English",
+          "isActive": true
+        }
+      ],
+      "orders": [
+        {
+          "id": "1",
+          "orderStatus": "delivered",
+          "date": "09/09/2025",
+          "total": 228,
+          "address": {
+            "username": "John Doe",
+            "email": "john@gmail.com",
+            "phone": "8086785008",
+            "address": "kolikkal",
+            "pin": "673574"
+          },
+          "products": [
+            {
+              "id": "3",
+              "title": "Harry Potter and the Philosopher's Stone",
+              "author": "J.K. Rowling",
+              "price": "49.97",
+              "image": "https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg",
+              "category": "Fiction",
+              "description": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts and the boy who lived.",
+              "stock": 11,
+              "rating": 4.9,
+              "pages": 336,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            },
+            {
+              "id": "1",
+              "title": "The Alchemist",
+              "author": "Paulo Coelho",
+              "price": 39.98,
+              "image": "https://m.media-amazon.com/images/I/81ZtAPCqyGL.UF1000,1000_QL80.jpg",
+              "category": "Fiction",
+              "description": "A novel about a young shepherd's journey to find treasure in the Egyptian desert.",
+              "stock": 8,
+              "rating": 4.7,
+              "pages": 208,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            },
+            {
+              "id": "4",
+              "title": "The Great Gatsby",
+              "author": "F. Scott Fitzgerald",
+              "price": 32.48,
+              "image": "https://m.media-amazon.com/images/I/81TLiZrasVL.UF1000,1000_QL80.jpg",
+              "category": "Fiction",
+              "description": "Story of wealth, love, and the American Dream in Jazz Age.",
+              "stock": 18,
+              "rating": 4.3,
+              "pages": 180,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            },
+            {
+              "id": "8",
+              "title": "The Hobbit",
+              "author": "J.R.R. Tolkien",
+              "price": 51.25,
+              "image": "https://m.media-amazon.com/images/I/712cDO7d73L.UF1000,1000_QL80.jpg",
+              "category": "Fiction",
+              "description": "Fantasy novel about Bilbo Baggins' journey to the Lonely Mountain.",
+              "stock": 28,
+              "rating": 4.9,
+              "pages": 310,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            },
+            {
+              "id": "13",
+              "title": "The Subtle Art of Not Giving a F*ck",
+              "author": "Mark Manson",
+              "price": 54.97,
+              "image": "https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg",
+              "category": "Non-Fiction",
+              "description": "Counterintuitive approach to living a good life.",
+              "stock": 28,
+              "rating": 4.3,
+              "pages": 224,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            }
+          ],
+          "status": "delivered"
+        }
+      ]
+    },
+    {
+      "id": "fcf2",
+      "username": "Aiman",
+      "mail": "aiman@gmail.com",
+      "password": "246810",
+      "role": "user",
+      "isBlock": false,
+      "date": "10/09/2025",
+      "cart": [],
+      "wishlist": [
+        {
+          "id": "2",
+          "title": "1984",
+          "author": "George Orwell",
+          "price": 34.38,
+          "image": "https://m.media-amazon.com/images/I/81YxjLkcAdL.UF1000,1000_QL80.jpg",
+          "category": "Fiction",
+          "description": "Dystopian novel about totalitarian control and surveillance.",
+          "stock": 0,
+          "rating": 4.7,
+          "pages": 328,
+          "language": "English",
+          "isActive": true
+        },
+        {
+          "id": "1",
+          "title": "The Alchemist",
+          "author": "Paulo Coelho",
+          "price": "46.98",
+          "image": "https://m.media-amazon.com/images/I/81ZtAPCqyGL.UF1000,1000_QL80.jpg",
+          "category": "Fiction",
+          "description": "A novel about a young shepherd's journey to find treasure in the Egyptian desert.",
+          "stock": 7,
+          "rating": "4.9",
+          "pages": 208,
+          "language": "English",
+          "isActive": true
+        },
+        {
+          "id": "21",
+          "title": "Dune",
+          "author": "Frank Herbert",
+          "price": "35.98",
+          "image": "https://m.media-amazon.com/images/I/71m91l0treL._UF1000,1000_QL80_.jpg",
+          "category": "Fiction",
+          "description": "Epic science fiction novel set on the desert planet Arrakis, focusing on politics, religion, and ecology.",
+          "stock": 22,
+          "rating": 4.8,
+          "pages": 412,
+          "language": "English",
+          "isActive": true
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "76f4",
+      "username": "Sherlock Holmes",
+      "mail": "holmes@gmail.com",
+      "password": "bakerstreet",
+      "role": "user",
+      "isBlock": false,
+      "date": "10/09/2025",
+      "cart": [],
+      "wishlist": [
+        {
+          "id": "3",
+          "title": "Harry Potter and the Philosopher's Stone",
+          "author": "J.K. Rowling",
+          "price": "33.96",
+          "image": "https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg",
+          "category": "Fiction",
+          "description": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts and the boy who lived.",
+          "stock": 9,
+          "rating": 4.9,
+          "pages": 336,
+          "language": "English",
+          "isActive": true
+        },
+        {
+          "id": "2",
+          "title": "1984",
+          "author": "George Orwell",
+          "price": 34.38,
+          "image": "https://m.media-amazon.com/images/I/81YxjLkcAdL.UF1000,1000_QL80.jpg",
+          "category": "Fiction",
+          "description": "Dystopian novel about totalitarian control and surveillance.",
+          "stock": 0,
+          "rating": 4.7,
+          "pages": 328,
+          "language": "English",
+          "isActive": true
+        },
+        {
+          "id": "1",
+          "title": "The Alchemist",
+          "author": "Paulo Coelho",
+          "price": "46.98",
+          "image": "https://m.media-amazon.com/images/I/81ZtAPCqyGL.UF1000,1000_QL80.jpg",
+          "category": "Fiction",
+          "description": "A novel about a young shepherd's journey to find treasure in the Egyptian desert.",
+          "stock": 7,
+          "rating": "4.9",
+          "pages": 208,
+          "language": "English",
+          "isActive": true
+        },
+        {
+          "id": "21",
+          "title": "Dune",
+          "author": "Frank Herbert",
+          "price": "25.71",
+          "image": "https://m.media-amazon.com/images/I/71m91l0treL._UF1000,1000_QL80_.jpg",
+          "category": "Fiction",
+          "description": "Epic science fiction novel set on the desert planet Arrakis, focusing on politics, religion, and ecology.",
+          "stock": 20,
+          "rating": 4.8,
+          "pages": 412,
+          "language": "English",
+          "isActive": true
+        },
+        {
+          "id": "4",
+          "title": "The Great Gatsby",
+          "author": "F. Scott Fitzgerald",
+          "price": 32.48,
+          "image": "https://m.media-amazon.com/images/I/81TLiZrasVL.UF1000,1000_QL80.jpg",
+          "category": "Fiction",
+          "description": "Story of wealth, love, and the American Dream in Jazz Age.",
+          "stock": 15,
+          "rating": 4.3,
+          "pages": 180,
+          "language": "English",
+          "isActive": true
+        }
+      ],
+      "orders": [
+        {
+          "id": "1",
+          "orderStatus": "shipped",
+          "date": "10/09/2025",
+          "total": "30.00",
+          "address": {
+            "username": "Anwar Swadiq",
+            "email": "anwar@gmail.com",
+            "phone": "23456789",
+            "address": "kolikkal",
+            "pin": "673574"
+          },
+          "products": [
+            {
+              "id": "21",
+              "title": "Dune",
+              "author": "Frank Herbert",
+              "price": "30.74",
+              "image": "https://m.media-amazon.com/images/I/71m91l0treL._UF1000,1000_QL80_.jpg",
+              "category": "Fiction",
+              "description": "Epic science fiction novel set on the desert planet Arrakis, focusing on politics, religion, and ecology.",
+              "stock": 20,
+              "rating": 4.8,
+              "pages": 412,
+              "language": "English",
+              "isActive": true
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "orderStatus": "pending",
+          "date": "10/09/2025",
+          "total": 82,
+          "address": {
+            "username": "Anwar Swadiq",
+            "email": "anwar@gmail.com",
+            "phone": "23456789",
+            "address": "kolikkal",
+            "pin": "673574"
+          },
+          "products": [
+            {
+              "id": "4",
+              "title": "The Great Gatsby",
+              "author": "F. Scott Fitzgerald",
+              "price": 32.48,
+              "image": "https://m.media-amazon.com/images/I/81TLiZrasVL.UF1000,1000_QL80.jpg",
+              "category": "Fiction",
+              "description": "Story of wealth, love, and the American Dream in Jazz Age.",
+              "stock": 16,
+              "rating": 4.3,
+              "pages": 180,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            },
+            {
+              "id": "3",
+              "title": "Harry Potter and the Philosopher's Stone",
+              "author": "J.K. Rowling",
+              "price": 49.97,
+              "image": "https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg",
+              "category": "Fiction",
+              "description": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts and the boy who lived.",
+              "stock": 9,
+              "rating": 4.9,
+              "pages": 336,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "orderStatus": "cancelled",
+          "date": "10/09/2025",
+          "total": 110,
+          "address": {
+            "username": "Anwar Swadiq",
+            "email": "anwar@gmail.com",
+            "phone": "23456789",
+            "address": "kolikkal",
+            "pin": "673574"
+          },
+          "products": [
+            {
+              "id": "7",
+              "title": "Lord of the Flies",
+              "author": "William Golding",
+              "price": 30.63,
+              "image": "https://m.media-amazon.com/images/I/716MU3GOvJL.UF1000,1000_QL80.jpg",
+              "category": "Fiction",
+              "description": "Story of boys stranded on an island and their descent into savagery.",
+              "stock": 32,
+              "rating": 4,
+              "pages": 224,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            },
+            {
+              "id": "8",
+              "title": "The Hobbit",
+              "author": "J.R.R. Tolkien",
+              "price": 51.25,
+              "image": "https://m.media-amazon.com/images/I/712cDO7d73L.UF1000,1000_QL80.jpg",
+              "category": "Fiction",
+              "description": "Fantasy novel about Bilbo Baggins' journey to the Lonely Mountain.",
+              "stock": 27,
+              "rating": 4.9,
+              "pages": 310,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            },
+            {
+              "id": "6",
+              "title": "The Catcher in the Rye",
+              "author": "J.D. Salinger",
+              "price": 28.75,
+              "image": "https://m.media-amazon.com/images/I/8125BDk3l9L.jpg",
+              "category": "Fiction",
+              "description": "Story of teenage rebellion and alienation in New York City.",
+              "stock": 26,
+              "rating": 4.2,
+              "pages": 234,
+              "language": "English",
+              "isActive": true,
+              "cartCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
