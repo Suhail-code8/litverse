@@ -1,47 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-  X,
-  Youtube,
-} from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-blue-800 to-purple-800 text-gray-300 py-8 mt-12">
-      <div className="container  mx-auto px-4 flex  gap-8 justify-around text-center md:text-left">
+    <footer className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-gray-300 py-10 mt-12">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
         {/* Brand / Logo */}
-        <div className="flex flex-col items-center md:items-start space-y-4">
-          <h2 className="text-3xl font-bold text-white tracking-wide">
-            LitVerse
-          </h2>
-          <p className="text-sm text-gray-300 leading-relaxed max-w-xs text-center md:text-left">
+        <div className="space-y-4">
+          <h2 className="text-3xl font-bold text-white">LitVerse</h2>
+          <p className="text-sm text-gray-400 leading-relaxed">
             Your gateway to magical stories and timeless knowledge 📚
           </p>
-          <div className="text-xs text-gray-300 text-center md:text-left">
-            <p>Discover • Read • Inspire</p>
-          </div>
+          <p className="text-xs text-gray-500">Discover • Read • Inspire</p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/" className="hover:text-red-400">
+              <Link to="/" className="hover:text-pink-400 transition-colors">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/products" className="hover:text-red-400">
+              <Link to="/products" className="hover:text-pink-400 transition-colors">
                 Products
               </Link>
             </li>
             <li>
-              <Link to="/profile" className="hover:text-red-400">
+              <Link to="/profile" className="hover:text-pink-400 transition-colors">
                 Profile
               </Link>
             </li>
@@ -49,50 +38,30 @@ export default function Footer() {
         </div>
 
         {/* Socials */}
-        <div className="flex flex-col items-center md:items-start space-y-2">
-          <h3 className="text-lg font-semibold text-white mb-3">Follow Us</h3>
-          <div>
-            <a
-              href="#"
-              className="hover:text-red-400 transition-colors flex items-center space-x-2 max-w-max"
-            >
-              <Instagram size={20} />
-              <span>Instagram</span>
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
+          <div className="flex justify-center md:justify-start space-x-5">
+            <a href="#" className="hover:text-pink-400 transition-colors">
+              <Instagram size={22} />
             </a>
-          </div>
-          <div>
-            {" "}
-            <a
-              href="#"
-              className="hover:text-red-400 transition-colors flex items-center space-x-2 max-w-max"
-            >
-              <Facebook size={20} />
-              <span>Facebook</span>
+            <a href="#" className="hover:text-pink-400 transition-colors">
+              <Facebook size={22} />
             </a>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="hover:text-red-400 transition-colors flex items-center space-x-2 max-w-max"
-            >
-              <X size={20} />
-              <span>X</span>
+            <a href="#" className="hover:text-pink-400 transition-colors">
+              <Twitter size={22} />
             </a>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="hover:text-red-400 transition-colors flex items-center space-x-2 max-w-max"
-            >
-              <Linkedin size={20} />
-              <span>LinkedIn</span>
+            <a href="#" className="hover:text-pink-400 transition-colors">
+              <Linkedin size={22} />
+            </a>
+            <a href="#" className="hover:text-pink-400 transition-colors">
+              <Youtube size={22} />
             </a>
           </div>
         </div>
       </div>
 
       {/* Bottom strip */}
-      <div className="mt-8 border-t border-gray-500 pt-4 text-center text-sm text-gray-300">
+      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-xs text-gray-500">
         © {new Date().getFullYear()} LitVerse. All rights reserved.
       </div>
     </footer>

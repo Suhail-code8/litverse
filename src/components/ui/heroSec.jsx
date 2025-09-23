@@ -42,20 +42,62 @@ export default function HeroCarousel() {
   const currentBook = books[current];
 
   return (
-    <div className="relative h-[28rem] w-full overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-center">
-      <div className="flex flex-col items-start max-w-md w-1/2 px-6">
-        <h2 className="text-3xl font-bold">{currentBook.title}</h2>
-        <h3 className="text-lg mt-2 italic">by {currentBook.author}</h3>
-        <p className="mt-4 text-sm text-gray-300">{currentBook.description}</p>
-      </div>
-      <div className="flex justify-center items-center w-2/4">
-      <Link to={`/productView/${currentBook.id}`}>
-        <img
-          src={currentBook.image}
-          alt={currentBook.title}
-          className="max-h-[350px] object-contain rounded-lg shadow-lg"
-        />
+    <div className="relative h-[28rem] w-full overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+      
+      {/* ✅ Mobile: Only Image */}
+      <div className="block md:hidden h-full w-full">
+        <Link to={`/productView/${currentBook.id}`}>
+          <img
+            src={currentBook.image}
+            alt={currentBook.title}
+            className="h-full w-full object-cover"
+          />
         </Link>
+      </div>
+
+      {/* ✅ Desktop: Text + Image */}
+      <div className="hidden md:flex h-full items-center justify-between px-10">
+        {/* Text */}
+        <div className="flex flex-col justify-center max-w-lg space-y-4">
+          <h2 className="text-4xl font-extrabold leading-snug drop-shadow-md">
+            {currentBook.title}
+          </h2>
+          <h3 className="text-lg italic opacity-90">
+            by {currentBook.author}
+          </h3>
+          <p className="text-base text-gray-200 leading-relaxed">
+            {currentBook.description}
+          </p>
+          <Link
+            to={`/productView/${currentBook.id}`}
+            className="inline-block mt-3 px-6 py-2 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition"
+          >
+            View Details
+          </Link>
+        </div>
+
+        {/* Image */}
+        <div className="flex justify-center items-center">
+          <Link to={`/productView/${currentBook.id}`}>
+            <img
+              src={currentBook.image}
+              alt={currentBook.title}
+              className="max-h-[380px] rounded-xl shadow-2xl"
+            />
+          </Link>
+        </div>
+      </div>
+
+      {/* Carousel Dots */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        {books.map((_, index) => (
+          <div
+            key={index}
+            className={`w-3 h-3 rounded-full ${
+              index === current ? "bg-white" : "bg-gray-400/60"
+            }`}
+          ></div>
+        ))}
       </div>
     </div>
   );
