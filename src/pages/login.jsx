@@ -39,7 +39,7 @@ export default function Login() {
     currentUser && navigate("/");
   }, []);
   function verifyUser() {
-    userData.map((user) => {
+    userData?.map((user) => {
       if (user.mail !== mail) {
         setMailAlert("Invalid email");
       } else if (user.isBlock) {
