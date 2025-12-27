@@ -1,9 +1,7 @@
 import { createContext, useState } from "react";
 
 export const AuthContext = createContext("");
-import { Routes,Route } from "react-router-dom";
-import Signup from "../pages/signup";
-import Login from "../pages/login";
+
 
 export default function AuthProvider({ children }) {
   const [name, setName] = useState("");

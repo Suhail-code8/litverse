@@ -1,24 +1,53 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../context/ProductContext";
 import { Link } from "react-router-dom";
 import Navbar from "../components/common/Navbar";
-import axios from "axios";
+import api from "../api/axios";
 
 function Profile() {
   let { currentUser, userData } = useContext(Context);
   const [modalon, setmodalon] = useState(false);
-  const [mail,setmail]= useState("");
-  const [pass,setPass]= useState("");
-  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+  const [mail, setmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [orders, setOrders] = useState([]);
+  const [loadingOrders, setLoadingOrders] = useState(true);
 
+  const dateObj = new Date(userData.createdAt)
+  const date = dateObj.toDateString()
 
-  function changePass(){
-if (userData.mail===mail){
-  axios.patch(`${API}/users/${currentUser}`,{password : pass})
-}
-else alert("Your email doesn't match with the excistig one")
-setmodalon(false)
+  useEffect(() => {
+    if (currentUser) {
+      fetchOrders();
+    }
+  }, [currentUser]);
+
+  async function fetchOrders() {
+    try {
+      const res = await api.get("/api/order/my");
+      setOrders(res.data.orders || []);
+    } catch (err) {
+      console.error("Failed to fetch orders:", err);
+    } finally {
+      setLoadingOrders(false);
+    }
   }
+
+  async function changePass() {
+    if (userData.email === mail) {
+      try {
+        await api.patch("/api/auth/user", { password: pass });
+        alert("Password changed successfully");
+        setmodalon(false);
+        setmail("");
+        setPass("");
+      } catch (err) {
+        alert("Failed to change password: " + (err?.response?.data?.message || err.message));
+      }
+    } else {
+      alert("Your email doesn't match with the existing one");
+    }
+  }
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -31,11 +60,11 @@ setmodalon(false)
             <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-8 text-white">
               <div className="flex items-center gap-6">
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl font-bold">
-                  {userData.username?.charAt(0).toUpperCase()}
+                  {userData.name?.charAt(0).toUpperCase()}
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold">{userData.username}</h1>
-                  <p className="text-blue-100 opacity-90">{userData.mail}</p>
+                  <h1 className="text-2xl font-bold">{userData.name}</h1>
+                  <p className="text-blue-100 opacity-90">{userData.email}</p>
                 </div>
               </div>
             </div>
@@ -64,7 +93,7 @@ setmodalon(false)
                   <h3 className="text-sm font-medium text-gray-500 mb-1">
                     Member Since
                   </h3>
-                  <p className="font-medium">{userData.date}</p>
+                  <p className="font-medium">{date}</p>
                 </div>
               </div>
 
@@ -76,13 +105,13 @@ setmodalon(false)
 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-600">Username</span>
-                    <span className="font-medium">{userData.username}</span>
+                    <span className="text-gray-600">Full Name</span>
+                    <span className="font-medium">{userData.name}</span>
                   </div>
 
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <span className="text-gray-600">Email Address</span>
-                    <span className="font-medium">{userData.mail}</span>
+                    <span className="font-medium">{userData.email}</span>
                   </div>
 
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
@@ -99,15 +128,15 @@ setmodalon(false)
                   </div>
 
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-600">Member Since</span>
-                    <span className="font-medium">{userData.date}</span>
+                    <span className="text-gray-600">Role</span>
+                    <span className="font-medium capitalize">{userData.role || "user"}</span>
                   </div>
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  {/* <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <span className="text-gray-600">Password</span>
                     <button onClick={() => setmodalon(!modalon)} className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 w-full sm:w-auto">
                       Change password
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -117,72 +146,75 @@ setmodalon(false)
                   My Orders
                 </h2>
 
-                {userData.orders && userData.orders.length > 0 ? (
+                {loadingOrders ? (
+                  <p className="text-gray-500">Loading orders...</p>
+                ) : orders && orders.length > 0 ? (
                   <div className="space-y-6">
-                    {userData.orders.map((order, index) => (
+                    {orders.map((order) => (
                       <div
-                        key={order.id}
+                        key={order._id}
                         className="border border-gray-200 rounded-lg shadow-sm bg-white overflow-hidden"
                       >
                         {/* Order Header */}
                         <div className="px-4 py-3 bg-gray-50 flex justify-between items-center">
                           <div>
                             <p className="text-sm text-gray-500">
-                              Order ID: #{order.id}
+                              Order ID: #{order._id?.slice(-6)}
                             </p>
                             <p className="text-xs text-gray-400">
-                              Date: {order.date}
+                              Date: {new Date(order.createdAt).toLocaleDateString()}
                             </p>
                           </div>
                           <div>
                             <span
                               className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                order.orderStatus === "delivered"
+                                order.status === "delivered"
                                   ? "bg-green-100 text-green-800"
-                                  : order.orderStatus === "shipped"
+                                  : order.status === "shipped"
                                   ? "bg-blue-100 text-blue-800"
-                                  : order.orderStatus === "pending"
+                                  : order.status === "pending"
                                   ? "bg-yellow-100 text-yellow-800"
                                   : "bg-gray-100 text-gray-800"
                               }`}
                             >
-                              {order.orderStatus}
+                              {order.status}
                             </span>
                           </div>
                         </div>
 
                         {/* Products */}
                         <div className="p-4 space-y-4">
-                          {order.products.map((product) => (
+                          {
+                          order.items && order.items.map((item) => {
+                          return(
                             <div
-                              key={product.id}
+                              key={item.book._id}
                               className="flex items-center gap-4 border-b border-gray-100 pb-4 last:border-b-0"
                             >
                               <img
-                                src={product.image}
-                                alt={product.title}
+                                src={item.book.image?.url}
+                                alt={item.book.title}
                                 className="w-16 h-20 object-cover rounded-md"
                               />
                               <div className="flex-1">
                                 <h3 className="text-sm font-semibold text-gray-800">
-                                  {product.title}
+                                  {item.book.title}
                                 </h3>
                                 <p className="text-xs text-gray-500">
-                                  {product.author}
+                                  {item.book.author}
                                 </p>
                                 <p className="text-sm font-medium text-gray-700 mt-1">
-                                  ₹{product.price}
+                                  ${item.book.price} × {item.qty}
                                 </p>
                               </div>
                             </div>
-                          ))}
+)})}
                         </div>
 
                         {/* Order Footer */}
                         <div className="px-4 py-3 bg-gray-50 flex justify-between items-center">
                           <p className="text-sm text-gray-600">
-                            <span className="font-medium">Total:</span> ₹
-                            {order.total}
+                            <span className="font-medium">Total:</span> ${order.total?.toFixed(2)}
                           </p>
                         </div>
                       </div>
@@ -266,13 +298,14 @@ setmodalon(false)
               <input
                 placeholder="Input your email"
                 value={mail}
-                onChange={(e)=>setmail(e.target.value)}
+                onChange={(e) => setmail(e.target.value)}
                 className="w-full px-3 py-2 border rounded"
               />
-               <input
-                placeholder="Enter a password"
+              <input
+                placeholder="Enter a new password"
+                type="password"
                 value={pass}
-                onChange={(e)=>setPass(e.target.value)}
+                onChange={(e) => setPass(e.target.value)}
                 className="w-full px-3 py-2 border rounded"
               />
             </div>
@@ -285,12 +318,11 @@ setmodalon(false)
                 Cancel
               </button>
               <button
-                type="submit"
-                onClick={
-                  changePass}
+                type="button"
+                onClick={changePass}
                 className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 w-full sm:w-auto"
               >
-                change Password
+                Change Password
               </button>
             </div>
           </div>

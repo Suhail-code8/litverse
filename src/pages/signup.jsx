@@ -1,14 +1,17 @@
-import React, { useContext, useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
+import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { Context } from "../context/ProductContext";
 import { Link, useNavigate } from "react-router-dom";
-import WishList from "./wishlist";
 import { toast } from "sonner";
+import GoogleAuthButton from "../components/GoogleAuthButton";
 
-function Signup() {
-  let {
+export default function Signup() {
+  const navigate = useNavigate();
+
+  const {
     name,
-     pass,
+    pass,
     mail,
     mailAlert,
     setMailAlert,
@@ -16,122 +19,134 @@ function Signup() {
     setPassAlert,
     getName,
     getPass,
-    getMail
+    getMail,
   } = useContext(AuthContext);
-  const navigate = useNavigate();
-  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
 
+  const { setCurrentUser, setUserData } = useContext(Context);
 
+  async function addUser() {
+    if (!mail.includes("@")) {
+      setMailAlert("Enter a valid email");
+      return;
+    }
 
-  function addUser() {
-    if (mail.includes("@gmail") && pass.length >= 6) {
-      axios.post(`${API}/users`, {
-        username: `${name}`,
-        mail: `${mail}`,
-        password: `${pass}`,
-        role :`user`,
-        isBlock : false,
-        date : new Date().toLocaleDateString(),
-        cart : [],
-        wishlist : [],
-        orders : []
+    if (pass.length < 6) {
+      setPassAlert("Password must be at least 6 characters");
+      return;
+    }
+
+    try {
+      const res = await api.post("/api/auth/register", {
+        name,
+        email: mail,
+        password: pass,
       });
-      toast.success("Account created")
+
+      const { accessToken, user } = res.data;
+
+      localStorage.setItem("accessToken", accessToken);
+      setCurrentUser(user.id);
+      setUserData(user);
+
+      toast.success("Account created successfully");
       setMailAlert("");
       setPassAlert("");
-      navigate("/login")
-    } else {
-      if (!mail.includes("@gmail")) setMailAlert("Enter a valid email ");
-      if (pass.length < 6)
-        setPassAlert("Your password should have atleast 6 character");
+
+      navigate("/");
+    } catch (err) {
+      const msg = err?.response?.data?.message || "Registration failed";
+      toast.error(msg);
     }
   }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">
+        {/* Header */}
+        <div className="text-center mb-6">
+          <h1 className="text-3xl font-bold text-gray-800 mb-1">
             Create Account
           </h1>
-          <p className="text-gray-600">Enter the world of Literature</p>
+          <p className="text-gray-600 text-sm">
+            Enter the world of literature
+          </p>
         </div>
-        {/* Form Card */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-          <div className="space-y-6">
-            {/* input for name */}
-            <div className="space-y-2">
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
+
+        {/* Card */}
+        <div className="bg-white rounded-2xl shadow-xl p-7 border border-gray-100">
+          <div className="space-y-5">
+            {/* Name */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Full Name
               </label>
-              <div className="relative">
-                <input
-                  id="name"
-                  type="text"
-                  value={name}
-                  onChange={getName}
-                  placeholder="Enter your full name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 placeholder-gray-400"
-                />
-              </div>
-            </div>
-            {/*Input for email */}
-            <div className="space-y-2">
-              <label
-                htmlFor="mail"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email Address
-              </label>
-              <div className="relative">
-                <input
-                  id="mail"
-                  type="email"
-                  value={mail}
-                  onChange={getMail}
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 placeholder-gray-400"
-                />
-                <p className="text-red-700">{mailAlert}</p>
-              </div>
-            </div>
-            {/*Input for pass */}
-            <div className="space-y-2">
-              <label
-                htmlFor="pass"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Password
-              </label>
-              <div className="relative">
-                <input
-                  id="pass"
-                  type="password"
-                  value={pass}
-                  onChange={getPass}
-                  placeholder="Create a password"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 placeholder-gray-400"
-                />
-                <p className="text-red-700">{passAlert}</p>
-              </div>
+              <input
+                type="text"
+                value={name}
+                onChange={getName}
+                placeholder="Enter your name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
             </div>
 
+            {/* Email */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                value={mail}
+                onChange={getMail}
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+              <p className="text-sm text-red-600 min-h-[20px]">
+                {mailAlert}
+              </p>
+            </div>
+
+            {/* Password */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Password
+              </label>
+              <input
+                type="password"
+                value={pass}
+                onChange={getPass}
+                placeholder="Create a password"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+              <p className="text-sm text-red-600 min-h-[20px]">
+                {passAlert}
+              </p>
+            </div>
+
+            {/* Signup Button */}
             <button
-              type="button"
               onClick={addUser}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition"
             >
               Create Account
             </button>
-          </div>
-          <div className="mt-6 text-center">
-            <p className="text-sm text-gray-600">
+
+            {/* Divider */}
+            <div className="flex items-center gap-3">
+              <div className="flex-1 h-px bg-gray-300" />
+              <span className="text-sm text-gray-500">OR</span>
+              <div className="flex-1 h-px bg-gray-300" />
+            </div>
+
+            {/* Google Signup */}
+            <GoogleAuthButton />
+
+            {/* Login link */}
+            <p className="text-sm text-center text-gray-600">
               Already have an account?{" "}
               <Link
                 to="/login"
-                className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-700 font-medium"
               >
                 Login
               </Link>
@@ -142,5 +157,3 @@ function Signup() {
     </div>
   );
 }
-
-export default Signup;

@@ -1,27 +1,41 @@
 import React, { useContext, useState } from "react";
 import { AdmContext } from "./AdmContext";
-import axios from "axios";
+import api from "../api/axios";
 import AdminNav from "./AdminNav";
+import { toast } from "sonner";
 
 function AdmUsers() {
-  const { userList, setUserList } = useContext(AdmContext);
-  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
-
+  const { userList, setUserList, fetchAdmData } = useContext(AdmContext);
   const [search, setSearch] = useState("");
 
-  async function action(user) {
-    await axios.patch(`${API}/users/${user.id}`, { isBlock: !user.isBlock });
-
-    let newList = userList.map((val) =>
-      val.id === user.id ? { ...val, isBlock: !val.isBlock } : val
-    );
-    setUserList(newList);
+  async function toggleBlockUser(user) {
+    try {
+      const res = await api.patch(`/api/users/${user._id}`, { isBlocked: !user.isBlocked });
+      // Updating frontend
+      const newList = userList.map((u) =>
+        u._id === user._id ? res.data.user : u
+      );
+      setUserList(newList);
+      // Refresh from backend
+      try {
+        await fetchAdmData();
+      } catch (e) {
+        console.warn("AdmUsers: fetchAdmData after toggle failed", e);
+      }
+      toast.success(`User ${!user.isBlocked ? "blocked" : "unblocked"}!`);
+    } catch (err) {
+      const msg = err?.response?.data?.message || "Failed to update user";
+      toast.error(msg);
+      console.error("Toggle block error:", err);
+    }
   }
 
-  // Filtering users by username (for searching)
+  // Filtering users by name or email
   const filteredUsers = userList.filter(
     (user) =>
-      user.username.toLowerCase().includes(search.toLowerCase()));
+      user.name.toLowerCase().includes(search.toLowerCase()) ||
+      user.email.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="flex">
@@ -39,60 +53,54 @@ function AdmUsers() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      {/* Listing usres */}
+      {/* Listing users */}
       <div className="overflow-x-auto bg-white border rounded-lg shadow">
         <table className="w-full text-sm min-w-[700px]">
           <thead className="bg-gray-800 text-white">
             <tr>
               <th className="px-4 py-2 text-left">Sl:no</th>
-              <th className="px-4 py-2 text-left">Username</th>
+              <th className="px-4 py-2 text-left">Name</th>
               <th className="px-4 py-2 text-left">Email</th>
               <th className="px-4 py-2 text-left">Role</th>
               <th className="px-4 py-2 text-left">Status</th>
               <th className="px-4 py-2 text-left">Joined</th>
-              <th className="px-4 py-2 text-left">Orders</th>
               <th className="px-4 py-2 text-left">Action</th>
             </tr>
           </thead>
           <tbody>
             {filteredUsers.map((user, index) => (
               <tr
-                key={user.id}
+                key={user._id}
                 className="border-b hover:bg-gray-50 transition duration-150"
               >
                 <td className="px-4 py-2">{index + 1}</td>
                 <td className="px-4 py-2 font-medium text-gray-800">
-                  {user.username}
+                  {user.name}
                 </td>
-                <td className="px-4 py-2">{user.mail}</td>
+                <td className="px-4 py-2">{user.email}</td>
                 <td className="px-4 py-2 capitalize">{user.role}</td>
                 <td className="px-4 py-2">
                   <span
                     className={`px-2 py-1 text-sm rounded-full ${
-                      user.isBlock
+                      user.isBlocked
                         ? "bg-red-100 text-red-600"
                         : "bg-green-100 text-green-600"
                     }`}
                   >
-                    {user.isBlock ? "Inactive" : "Active"}
+                    {user.isBlocked ? "Blocked" : "Active"}
                   </span>
                 </td>
-                <td className="px-4 py-2">{user?.date}</td>
-                <td className="px-4 py-2 flex justify-center ">
-                    <span className="text-blue-600 font-medium">
-                      {user.orders?.length}
-                    </span>
-                </td>
+                <td className="px-4 py-2">{new Date(user.createdAt).toLocaleDateString()}</td>
                 <td className="px-4 py-2">
                   <button
                     className={`px-3 py-1 rounded-md text-sm font-medium transition ${
-                      user.isBlock
+                      user.isBlocked
                         ? "bg-green-500 text-white hover:bg-green-600"
                         : "bg-red-500 text-white hover:bg-red-600"
                     }`}
-                    onClick={() => action(user)}
+                    onClick={() => toggleBlockUser(user)}
                   >
-                    {user.isBlock ? "Unblock" : "Block"}
+                    {user.isBlocked ? "Unblock" : "Block"}
                   </button>
                 </td>
               </tr>

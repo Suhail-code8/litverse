@@ -1,48 +1,48 @@
 import React, { useContext, useState } from "react";
 import { AdmContext } from "./AdmContext";
 import AdminNav from "./AdminNav";
-import axios from "axios";
+import api from "../api/axios";
+import { toast } from "sonner";
 
 export default function AdmOrders() {
-  const { orderList, setOrderList, userList, setUserList } =
-    useContext(AdmContext);
-    const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
-
+  const { orderList, setOrderList, fetchAdmData } = useContext(AdmContext);
   const [filter, setFilter] = useState("All");
-  // function to change status
-  function getStatus(status, id) {
-    let userId = id.slice(0, id.length - 1);
-    let newOrderList = userList
-      .find((user) => user.id === userId)
-      .orders.map((order) =>
-        order.id == id[id.length - 1]
-          ? { ...order, orderStatus: status }
-          : order
-      );
-    axios.patch(`${API}/users/${userId}`, { orders: newOrderList });
-    const updatedOrders = orderList.map((order) => {
-      if (order.id === id) {
-        return { ...order, orderStatus: status };
-      } else {
-        return order;
-      }
-    });
-    setOrderList(updatedOrders);
-  }
 
-  // setting datas for calculating orders category
+  const updateOrderStatus = async (orderId, newStatus) => {
+    try {
+      const res = await api.patch(`/api/order/${orderId}`, { status: newStatus });
+      // Updating frontend
+      const updated = orderList.map((order) =>
+        order._id === orderId ? res.data.order : order
+      );
+      setOrderList(updated);
+      try {
+        await fetchAdmData();
+      } catch (e) {
+        console.warn("AdmOrders: fetchAdmData after status update failed", e);
+      }
+      toast.success("Order status updated!");
+    } catch (err) {
+      const msg = err?.response?.data?.message || "Failed to update order status";
+      toast.error(msg);
+      console.error("Update status error:", err);
+    }
+  };
+
+  // Calculate status counts
   let statusCounts = { pending: 0, shipped: 0, cancelled: 0, delivered: 0 };
   orderList.forEach((order) => {
-    if (order.orderStatus === "pending") statusCounts.pending++;
-    else if (order.orderStatus === "shipped") statusCounts.shipped++;
-    else if (order.orderStatus === "cancelled") statusCounts.cancelled++;
-    else if (order.orderStatus === "delivered") statusCounts.delivered++;
+    const status = order.status?.toLowerCase() || "pending";
+    if (status === "pending") statusCounts.pending++;
+    else if (status === "shipped") statusCounts.shipped++;
+    else if (status === "cancelled") statusCounts.cancelled++;
+    else if (status === "delivered") statusCounts.delivered++;
   });
 
-  // setting list according to filter
+  // Filter orders
   let filtered = orderList;
   if (filter !== "All") {
-    filtered = orderList.filter((o) => o.orderStatus === filter);
+    filtered = orderList.filter((o) => (o.status?.toLowerCase() || "pending") === filter.toLowerCase());
   }
 
   return (
@@ -79,10 +79,10 @@ export default function AdmOrders() {
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="border border-blue-300 rounded-md px-3 py-1 text-sm shadow-sm bg-white focus:ring-2 focus:ring-blue-300 focus:border-none "
+            className="border border-blue-300 rounded-md px-3 py-1 text-sm shadow-sm bg-white focus:ring-2 focus:ring-blue-300 focus:border-none"
           >
             <option value="All">All</option>
-            <option value="pending">P   ending</option>
+            <option value="pending">Pending</option>
             <option value="shipped">Shipped</option>
             <option value="delivered">Delivered</option>
             <option value="cancelled">Cancelled</option>
@@ -91,79 +91,74 @@ export default function AdmOrders() {
 
         {/* listing orders */}
         <div className="bg-white border rounded-lg overflow-hidden shadow">
-          <table className="w-full text-sm">
-            <thead className="bg-gray-100 text-gray-700">
-              <tr>
-                <th className="px-4 py-2 text-left font-medium">Sl no</th>
-                <th className="px-4 py-2 text-left font-medium">Order ID</th>
-                <th className="px-4 py-2 text-left font-medium">Date</th>
-                <th className="px-4 py-2 text-left font-medium">Total</th>
-                <th className="px-4 py-2 text-left font-medium">Status</th>
-                <th className="px-4 py-2 text-left font-medium">Products</th>
-                <th className="px-4 py-2 text-left font-medium">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map((order, i) => (
-                <tr
-                  key={order.id}
-                  className="border-t hover:bg-gray-50 transition"
-                >
-                  <td className="px-4 py-2">{i + 1}</td>
-                  <td className="px-4 py-2 font-medium">{order.id}</td>
-                  <td className="px-4 py-2">{order.date}</td>
-                  <td className="px-4 py-2 font-semibold text-gray-800">
-                    ${order.total}
-                  </td>
-                  <td className="px-4 py-2">
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        order.orderStatus === "pending"
-                          ? "bg-yellow-50 text-yellow-700 border border-yellow-200"
-                          : order.orderStatus === "shipped"
-                          ? "bg-blue-50 text-blue-700 border border-blue-200"
-                          : order.orderStatus === "delivered"
-                          ? "bg-green-50 text-green-700 border border-green-200"
-                          : "bg-red-50 text-red-700 border border-red-200"
-                      }`}
-                    >
-                      {order.orderStatus}
-                    </span>
-                  </td>
-
-                  <td className="px-4 py-2">
-                    <div className="space-y-1">
-                      {order.products.map((p) => (
-                        <div key={p.id} className="flex items-center gap-2">
-                          <img
-                            src={p.image}
-                            alt={p.title}
-                            className="w-8 h-8 rounded object-cover border"
-                          />
-                          <div>
-                            <p className="text-sm font-medium">{p.title}</p>
-                            <p className="text-xs text-gray-500">${p.price}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </td>
-                  <td className="px-4 py-2">
-                    <select
-                      value={order.orderStatus}
-                      onChange={(e) => getStatus(e.target.value, order.id)}
-                      className="border rounded px-2 py-1 text-xs bg-white focus:ring-2 focus:ring-blue-300"
-                    >
-                      <option value="pending">Pending</option>
-                      <option value="shipped">Shipped</option>
-                      <option value="delivered">Delivered</option>
-                      <option value="cancelled">Cancelled</option>
-                    </select>
-                  </td>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm min-w-[900px]">
+              <thead className="bg-gray-100 text-gray-700">
+                <tr>
+                  <th className="px-4 py-2 text-left font-medium">Sl no</th>
+                  <th className="px-4 py-2 text-left font-medium">Order ID</th>
+                  <th className="px-4 py-2 text-left font-medium">Date</th>
+                  <th className="px-4 py-2 text-left font-medium">Total</th>
+                  <th className="px-4 py-2 text-left font-medium">Status</th>
+                  <th className="px-4 py-2 text-left font-medium">Items</th>
+                  <th className="px-4 py-2 text-left font-medium">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {filtered.map((order, i) => (
+                  <tr
+                    key={order._id}
+                    className="border-t hover:bg-gray-50 transition"
+                  >
+                    <td className="px-4 py-2">{i + 1}</td>
+                    <td className="px-4 py-2 font-medium text-blue-600">{order._id?.slice(-6) || "N/A"}</td>
+                    <td className="px-4 py-2">{new Date(order.createdAt).toLocaleDateString() || "N/A"}</td>
+                    <td className="px-4 py-2 font-semibold text-gray-800">
+                      ₹{order.totalAmount || order.total || 0}
+                    </td>
+                    <td className="px-4 py-2">
+                      <span
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${
+                          (order.status?.toLowerCase() || "pending") === "pending"
+                            ? "bg-yellow-50 text-yellow-700 border border-yellow-200"
+                            : (order.status?.toLowerCase() || "pending") === "shipped"
+                            ? "bg-blue-50 text-blue-700 border border-blue-200"
+                            : (order.status?.toLowerCase() || "pending") === "delivered"
+                            ? "bg-green-50 text-green-700 border border-green-200"
+                            : "bg-red-50 text-red-700 border border-red-200"
+                        }`}
+                      >
+                        {order.status || "Pending"}
+                      </span>
+                    </td>
+
+                    <td className="px-4 py-2">
+                      <div className="space-y-1">
+                        {order.items?.map((item) => (
+                          <div key={item._id} className="text-sm">
+                            <p className="font-medium">{item.book?.title || "Unknown"}</p>
+                            <p className="text-xs text-gray-500">Qty: {item.qty}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </td>
+                    <td className="px-4 py-2">
+                      <select
+                        value={order.status || "pending"}
+                        onChange={(e) => updateOrderStatus(order._id, e.target.value)}
+                        className="border rounded px-2 py-1 text-xs bg-white focus:ring-2 focus:ring-blue-300"
+                      >
+                        <option value="pending">Pending</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           {filtered.length === 0 && (
             <div className="text-center py-8 text-gray-500">
