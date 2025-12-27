@@ -49,10 +49,10 @@ navigate("/checkout",{state: {
                   {userCart.map((product, index, array) => (
                     <div key={product.id} className="p-6 flex flex-col sm:flex-row gap-6">
                       {/* Product Image */}
-                      <Link to={`/productView/${product.id}`} className="flex-shrink-0">
+                      <Link to={`/productView/${product.id || product._id}`} className="flex-shrink-0">
                         <div className="w-full sm:w-32 h-32 bg-gray-100 rounded-lg overflow-hidden">
                           <img
-                            src={product.image}
+                            src={product.image?.url}
                             alt={product.title}
                             className="w-full h-full object-contain p-4"
                           />
@@ -61,7 +61,7 @@ navigate("/checkout",{state: {
                       
                       {/* Product Details */}
                       <div className="flex-grow">
-                        <Link to={`/productView/${product.id}`}>
+                        <Link to={`/productView/${product.id || product._id}`}>
                           <h3 className="font-medium text-gray-900 text-lg mb-1 hover:text-blue-600 transition-colors">
                             {product.title}
                           </h3>

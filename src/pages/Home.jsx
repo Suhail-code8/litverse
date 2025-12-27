@@ -6,10 +6,16 @@ import HomeFooter from "../components/ui/HomeFooter";
 import HeroCarousel from "../components/ui/heroSec";
 import Footer from "../components/common/Footer";
 import Spinner from "../components/ui/LoaadingSpinner";
+import { BackendProductContext } from "../context/BackendProductContext";
 
 function Home() {
-  const { productList, currentUser, addToCart, addToWishlist, userWishlist,loading } =
+  const { currentUser, addToCart, addToWishlist, userWishlist} =
     useContext(Context);
+    
+const {
+  books: productList,
+  loading,
+} = useContext(BackendProductContext);
   // Show only first 8 products on home page
   const featuredProducts = productList.slice(0, 8);
   
@@ -24,24 +30,8 @@ function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-
-      {/* Hero Section */}
-      {/* <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">Welcome to LitVerse</h1>
-          <p className="text-xl mb-8 opacity-90">
-            Discover amazing books and build your perfect library
-          </p>
-          <Link
-            to="/products"
-            className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-block"
-          >
-            Shop All Books
-          </Link>
-        </div>
-      </section> */}
       <section>
-        <HeroCarousel />
+        <HeroCarousel books = {productList.slice(0,3)}/>
       </section>
 
       {/* Featured Products Section */}
@@ -60,12 +50,12 @@ function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {featuredProducts.map((product, index, array) => (
               <div
-                key={product.id}
+                key={product._id || product.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
                 <div className="relative overflow-hidden">
-                  <Link to={`/productView/${product.id}`}>
+                  <Link to={`/productView/${product._id || product.id}`}>
                   <img
-                    src={product.image}
+                    src={product.image?.url}
                     alt={product.title}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -75,7 +65,7 @@ function Home() {
                       onClick={() => addToWishlist(product, index, array)}
                       className="bg-white p-2 rounded-full shadow-md hover:scale-110 transition-transform duration-200"
                     >
-                      {userWishlist?.some((val) => val.id === product.id) ? (
+                      {userWishlist?.some((val) => val._id === product._id ) ? (
                         // Filled heart when product is in wishlist
                         <svg
                           className="w-6 h-6 text-red-500"
@@ -110,7 +100,7 @@ function Home() {
                 </div>
 
                 <div className="p-6">
-                  <Link to={`/productView/${product.id}`}>
+                  <Link to={`/productView/${product._id || product.id}`}>
                   <h3 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-2 min-h-[3.5rem]">
                     {product.title}
                   </h3>

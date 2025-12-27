@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "sonner";
 import { LogOut, Menu, X } from "lucide-react";
+import { Context } from "../context/ProductContext";
+import api from "../api/axios";
 
 function AdminNav() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+    const { setCurrentUser } = useContext(Context);
 
-  function logout() {
+
+  async function logout() {
+    await api.post('/api/auth/logout')
     localStorage.clear();
+    setCurrentUser(null);
     navigate("/login");
     toast.error("Signed out from your account", { duration: 1000 });
     setIsOpen(false); 

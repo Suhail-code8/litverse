@@ -4,29 +4,29 @@ import { Context } from "../context/ProductContext";
 import { Link } from "react-router-dom";
 import HomeFooter from "../components/ui/HomeFooter";
 import Footer from "../components/common/Footer";
+import { BackendProductContext } from "../context/BackendProductContext";
 
 function Products() {
+  const { currentUser, addToCart, addToWishlist, userWishlist } =
+    useContext(Context);
   const {
-    productList,
-    currentUser,
-    addToCart,
-    addToWishlist,
-    userWishlist,
-    filteredList,
-    setfilteredList
-  } = useContext(Context);
- function ratingfn(product) {
-  const ratings = product.reviews?.map(x => x.rating) || [];
-  if (ratings.length > 0) {
-    return (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1);
-  } else {
-    return 0; 
+    books: productList,
+    filteredBooks: filteredList,
+    setFilteredBooks: setfilteredList,
+    loading,
+  } = useContext(BackendProductContext);
+  function ratingfn(product) {
+    const ratings = product.reviews?.map((x) => x.rating) || [];
+    if (ratings.length > 0) {
+      return (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1);
+    } else {
+      return product.rating;
+    }
   }
-}
 
-//functions for filtering products :-
+  //functions for filtering products :-
 
-function filterfiction() {
+  function filterfiction() {
     try {
       setfilteredList(productList.filter((val) => val.category === "Fiction"));
     } catch (err) {
@@ -36,7 +36,9 @@ function filterfiction() {
 
   function filternon() {
     try {
-      setfilteredList(productList.filter((val) => val.category === "Non-Fiction"));
+      setfilteredList(
+        productList.filter((val) => val.category === "Non-Fiction")
+      );
     } catch (err) {
       console.log("Error : ", err);
     }
@@ -56,6 +58,18 @@ function filterfiction() {
     } catch (err) {
       console.log("Error : ", err);
     }
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen">
+        <Navbar />
+        <div className="flex justify-center items-center py-20 text-gray-600">
+          Loading books...
+        </div>
+        <Footer />
+      </div>
+    );
   }
 
   return (
@@ -172,15 +186,15 @@ function filterfiction() {
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {filteredList.map((product, index, array) => (
               <div
-                key={product.id}
+                key={product._id}
                 className="bg-white rounded-2xl sm:rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 
                   overflow-hidden group border border-gray-100 hover:border-blue-200
                   hover:-translate-y-1 sm:hover:-translate-y-2"
               >
                 <div className="relative overflow-hidden">
-                  <Link to={`/productView/${product.id}`}>
+                  <Link to={`/productView/${product._id}`}>
                     <img
-                      src={product.image}
+                      src={product.image?.url}
                       alt={product.title}
                       className="w-full h-60 sm:h-72 object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                     />
@@ -192,7 +206,11 @@ function filterfiction() {
                       className="bg-white/90 backdrop-blur-sm p-2 sm:p-3 rounded-full shadow-lg 
                         hover:scale-110 transition-all duration-200 group-hover:bg-white"
                     >
-                      {userWishlist?.some((val) => val.id === product.id) ? (
+                      {userWishlist?.some(
+                        (val) =>
+                          val._id === product._id ||
+                          val.book?._id === product._id
+                      ) ? (
                         <svg
                           className="w-5 h-5 sm:w-6 sm:h-6 text-red-500"
                           fill="currentColor"
@@ -239,7 +257,7 @@ function filterfiction() {
                 </div>
 
                 <div className="p-4 sm:p-6">
-                  <Link to={`/productView/${product.id}`}>
+                  <Link to={`/productView/${product._id}`}>
                     <h3
                       className="font-bold text-lg sm:text-xl text-gray-800 mb-2 sm:mb-3 line-clamp-2 min-h-[3rem] sm:min-h-[3.5rem]
                       hover:text-blue-600 transition-colors duration-200"
@@ -271,7 +289,9 @@ function filterfiction() {
                   </Link>
 
                   <button
-                    onClick={() => addToCart(product, index, array, "checkincr")}
+                    onClick={() =>
+                      addToCart(product, index, array, "checkincr")
+                    }
                     className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 
                       hover:to-indigo-700 text-white py-2 sm:py-3 rounded-xl sm:rounded-2xl font-semibold transition-all 
                       duration-200 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl

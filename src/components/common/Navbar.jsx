@@ -13,10 +13,11 @@ import {
   User,
 } from "lucide-react";
 import { toast } from "sonner";
+import { BackendProductContext } from "../../context/BackendProductContext";
+import api from "../../api/axios";
 
 function Navbar() {
   let {
-    productList,
     currentUser,
     setCurrentUser,
     userWishlist,
@@ -25,6 +26,9 @@ function Navbar() {
     setUserWishlist,
     setUserData,
   } = useContext(Context);
+
+  const { books: productList } = useContext(BackendProductContext);
+
 
   const [text, setText] = useState("");
   const [logText, setLogText] = useState("Login");
@@ -36,7 +40,8 @@ function Navbar() {
     setText(e.target.value);
   }
 
-  function logout() {
+ async function logout() {
+    await api.post('/api/auth/logout')
     localStorage.clear();
     setCurrentUser(null);
     setUserCart([]);
@@ -119,8 +124,8 @@ function Navbar() {
                       ) {
                         return (
                           <Link
-                            to={`/productView/${product.id}`}
-                            key={product.id}
+                            to={`/productView/${product._id}`}
+                            key={product._id}
                             className="block px-4 py-3 text-gray-700 hover:bg-blue-50 
                             hover:text-blue-600 transition-all duration-150 text-sm rounded-xl m-1
                             hover:shadow-sm font-medium"

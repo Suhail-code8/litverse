@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { AdmContext } from "./AdmContext";
-import axios from "axios";
+import api from "../api/axios";
 import AdminNav from "./AdminNav";
+import { toast } from "sonner";
 
 export default function AdmProducts() {
-  const { productList, setProductList} = useContext(AdmContext);
-  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+  const { productList, setProductList, fetchAdmData } = useContext(AdmContext);
 
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -16,11 +16,12 @@ export default function AdmProducts() {
     price: "",
     stock: "",
     category: "",
-    image: "",
+    image: null,
     description: "",
     pages: "",
     language: "",
     rating: "",
+    isActive: true,
   });
 
   const filteredProducts = productList.filter((p) =>
@@ -30,62 +31,87 @@ export default function AdmProducts() {
   const getData = (e) => {
     setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
   };
-
-  const addProduct = () => {
-    const newEntry = {
-      ...newProduct,
-      id:
-        productList.length > 0 ? productList[productList.length - 1].id + 1 : 1,
-      price: newProduct.price,
-      stock: newProduct.stock || 0,
-      pages: newProduct.pages || 0,
-      rating: newProduct.rating || 0,
-      reviews: [],
-    };
-    setProductList([...productList, newEntry]);
-    setNewProduct({
-      title: "",
-      author: "",
-      price: "",
-      stock: "",
-      category: "",
-      image: "",
-      description: "",
-      pages: "",
-      language: "",
-      rating: "",
-    });
-    axios.post(`${API}/books`, newEntry);
-    setShowModal(false);
+  const handleImageChange = (e) => {
+    setNewProduct({ ...newProduct, image: e.target.files[0] });
   };
 
-  function editProduct() {
-    const newList = productList.map((p) =>
-      p.id === newProduct.id ? newProduct : p
-    );
-    setProductList(newList);
-    axios.put(`${API}/books/${newProduct.id}`, newProduct);
-    setShowModal(false);
-    setType("add");
-    setNewProduct({
-      title: "",
-      author: "",
-      price: "",
-      stock: "",
-      category: "",
-      image: "",
-      description: "",
-      pages: "",
-      language: "",
-      rating: "",
-    });
-  }
+  const addProduct = async () => {
+    try {
+      const formData = new FormData();
 
-  const deleteProduct = (id) => {
+      formData.append("title", newProduct.title);
+      formData.append("author", newProduct.author);
+      formData.append("price", Number(newProduct.price));
+      formData.append("stock", Number(newProduct.stock) || 0);
+      formData.append("category", newProduct.category);
+      formData.append("description", newProduct.description);
+      formData.append("pages", Number(newProduct.pages) || 0);
+      formData.append("language", newProduct.language);
+      formData.append("rating", Number(newProduct.rating) || 0);
+
+      if (newProduct.image) {
+        formData.append("image", newProduct.image);
+      }
+
+      await api.post("/api/books", formData);
+
+      toast.success("Product added successfully!");
+      await fetchAdmData();
+      setShowModal(false);
+    } catch (err) {
+      toast.error(err?.response?.data?.message || "Failed to add product");
+    }
+  };
+
+  const editProduct = async () => {
+    try {
+      const formData = new FormData();
+
+      formData.append("title", newProduct.title);
+      formData.append("author", newProduct.author);
+      formData.append("price", Number(newProduct.price));
+      formData.append("stock", Number(newProduct.stock) || 0);
+      formData.append("category", newProduct.category);
+      formData.append("description", newProduct.description);
+      formData.append("pages", Number(newProduct.pages) || 0);
+      formData.append("language", newProduct.language);
+      formData.append("rating", Number(newProduct.rating) || 0);
+      formData.append("isActive", newProduct.isActive);
+
+      if (newProduct.image instanceof File) {
+        formData.append("image", newProduct.image);
+      }
+
+      const url = `/api/books/${newProduct._id}`;
+      await api.put(url, formData);
+
+      toast.success("Product updated successfully!");
+      await fetchAdmData();
+      setShowModal(false);
+    } catch (err) {
+      toast.error(err?.response?.data?.message || "Failed to update product");
+    }
+  };
+
+  const deleteProduct = async (id) => {
     if (window.confirm("Are you sure you want to delete this product?")) {
-      const updatedList = productList.filter((p) => p.id !== id);
-      setProductList(updatedList);
-      axios.delete(`${API}/books/${id}`);
+      try {
+        await api.delete(`/api/books/${id}/delete`);
+        const updatedList = productList.filter(
+          (p) => p._id === id || p.id === id
+        );
+        setProductList(updatedList);
+        try {
+          await fetchAdmData();
+        } catch (e) {
+          console.warn("AdmProducts: fetchAdmData after delete failed", e);
+        }
+        toast.success("Product deleted successfully!");
+      } catch (err) {
+        const msg = err?.response?.data?.message || "Failed to delete product";
+        toast.error(msg);
+        console.error("Delete product error:", err);
+      }
     }
   };
 
@@ -104,7 +130,22 @@ export default function AdmProducts() {
           </div>
 
           <button
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setType("add");
+              setShowModal(true);
+              setNewProduct({
+                title: "",
+                author: "",
+                price: "",
+                stock: "",
+                category: "",
+                image: "",
+                description: "",
+                pages: "",
+                language: "",
+                rating: "",
+              });
+            }}
             className="w-full sm:w-auto px-4 py-2 rounded-lg bg-green-600 text-white text-sm hover:bg-green-700"
           >
             + Add Product
@@ -139,20 +180,21 @@ export default function AdmProducts() {
               <tbody>
                 {filteredProducts.map((product, i) => (
                   <tr
-                    key={product.id}
+                    key={product._id || product.id}
                     className="border-t hover:bg-gray-50 transition"
                   >
                     <td className="px-4 py-2">{i + 1}</td>
                     <td className="px-4 py-2 flex items-center gap-3">
                       <img
-                        src={product.image}
+                        src={product.image?.url}
                         alt={product.title}
                         className="w-10 h-10 rounded object-cover border"
                       />
+
                       <span className="font-medium">{product.title}</span>
                     </td>
                     <td className="px-4 py-2 font-semibold text-gray-800">
-                      ${product.price}
+                      ₹{product.price}
                     </td>
                     <td className="px-4 py-2">{product.stock}</td>
                     <td className="px-4 py-2 text-gray-600">
@@ -170,7 +212,7 @@ export default function AdmProducts() {
                         Edit
                       </button>
                       <button
-                        onClick={() => deleteProduct(product.id)}
+                        onClick={() => deleteProduct(product._id || product.id)}
                         className="ml-2 px-3 py-1 text-xs rounded bg-red-100 text-red-700 hover:bg-red-200"
                       >
                         Delete
@@ -192,8 +234,9 @@ export default function AdmProducts() {
         {/* Modal for adding or editing products */}
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center z-50 px-2">
+            {/* Backdrop */}
             <div
-              className="absolute inset-0 bg-black/20 backdrop-blur-md backdrop-saturate-150"
+              className="absolute inset-0 bg-black/20 backdrop-blur-md"
               onClick={() => {
                 setShowModal(false);
                 setNewProduct({
@@ -207,15 +250,18 @@ export default function AdmProducts() {
                   pages: "",
                   language: "",
                   rating: "",
+                  isActive: true,
                 });
               }}
-            ></div>
+            />
 
-            <div className="relative bg-white rounded-lg p-6 w-full max-w-md shadow-lg max-h-[90vh] overflow-y-auto">
-              <h2 className="text-xl font-bold mb-4">
+            {/* Modal */}
+            <div className="relative bg-white rounded-xl p-6 w-full max-w-md shadow-xl max-h-[90vh] overflow-y-auto">
+              <h2 className="text-xl font-semibold text-gray-800 mb-5">
                 {type === "edit" ? "Edit Product" : "Add Product"}
               </h2>
 
+              {/* Form fields */}
               <div className="space-y-3">
                 {[
                   "title",
@@ -223,7 +269,6 @@ export default function AdmProducts() {
                   "price",
                   "stock",
                   "category",
-                  "image",
                   "description",
                   "pages",
                   "language",
@@ -236,7 +281,7 @@ export default function AdmProducts() {
                       placeholder="Description"
                       value={newProduct[field]}
                       onChange={getData}
-                      className="w-full px-3 py-2 border rounded"
+                      className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-green-500 outline-none"
                     />
                   ) : (
                     <input
@@ -252,13 +297,45 @@ export default function AdmProducts() {
                       }
                       value={newProduct[field]}
                       onChange={getData}
-                      className="w-full px-3 py-2 border rounded"
+                      className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-green-500 outline-none"
                     />
                   )
                 )}
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="w-full px-3 py-2 border rounded-lg text-sm"
+                />
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-end mt-4 gap-2">
+              {/* isActive toggle (EDIT ONLY) */}
+              {type === "edit" && (
+                <div className="mt-4 pt-3 border-t">
+                  <label className="flex items-center justify-between text-sm text-gray-700">
+                    <span className="font-medium">Product Status</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-gray-500">
+                        {newProduct.isActive ? "Active" : "Inactive"}
+                      </span>
+                      <input
+                        type="checkbox"
+                        checked={newProduct.isActive}
+                        onChange={(e) =>
+                          setNewProduct({
+                            ...newProduct,
+                            isActive: e.target.checked,
+                          })
+                        }
+                        className="accent-green-600 w-4 h-4"
+                      />
+                    </div>
+                  </label>
+                </div>
+              )}
+
+              {/* Actions */}
+              <div className="flex flex-col sm:flex-row justify-end mt-6 gap-2">
                 <button
                   onClick={() => {
                     setShowModal(false);
@@ -273,24 +350,19 @@ export default function AdmProducts() {
                       pages: "",
                       language: "",
                       rating: "",
+                      isActive: true,
                     });
                   }}
-                  className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 w-full sm:w-auto"
+                  className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 text-sm w-full sm:w-auto"
                 >
                   Cancel
                 </button>
+
                 <button
-                  type="submit"
-                  onClick={() => {
-                    if (type === "edit") {
-                      editProduct();
-                    } else {
-                      addProduct();
-                    }
-                  }}
-                  className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 w-full sm:w-auto"
+                  onClick={type === "edit" ? editProduct : addProduct}
+                  className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm w-full sm:w-auto"
                 >
-                  {type === "edit" ? "Edit" : "Add"}
+                  {type === "edit" ? "Update Product" : "Add Product"}
                 </button>
               </div>
             </div>

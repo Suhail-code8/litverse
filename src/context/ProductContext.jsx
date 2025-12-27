@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../api/axios";
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
@@ -20,7 +20,7 @@ export default function ProdProvider({ children }) {
   const [loading, setLoading] = useState(true);
   let onCart = false;
   let navigate = useNavigate();
-  const API = import.meta.env.VITE_API_URL || "https://litverse-db.onrender.com";
+  const API = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
 
 
@@ -29,22 +29,34 @@ export default function ProdProvider({ children }) {
   useEffect(() => {
     async function fetchdata() {
       try {
-        let res = await axios.get(`${API}/books`);
-        let list = res.data;
-        setProductList(list);
-        setfilteredList(list);
-
-        let userId = localStorage.getItem("id");
-        setCurrentUser(userId);
-
-        if (userId) {
+        // load minimal user-related data if auth present
+        const token = localStorage.getItem("accessToken");
+        if (token) {
           try {
-            let user = await axios.get(`${API}/users/${userId}`);
-            user = user.data;
+            const res = await api.get("/api/auth/user");
+            const user = res.data.user;
+            setCurrentUser(user.id);
             setUserData(user);
-            setUserWishlist(user.wishlist);
-            setUserCart(user.cart);
-            setUserOrders(user.orders);
+            // fetch cart and wishlist from backend
+            const [cartRes, wishRes] = await Promise.all([
+              api.get("/api/cart"),
+              api.get("/api/wishlist"),
+            ]);
+
+            const mappedCart = (cartRes.data.items || []).map((it) => ({
+              id: it.book._id,
+              title: it.book.title,
+              price: it.book.price,
+              image: it.book.image,
+              rating: it.book.rating,
+              cartCount: it.qty,
+            }));
+
+            const mappedWishlist = (wishRes.data.wishlist || []).map((it) => it.book);
+
+            setUserCart(mappedCart);
+            setUserWishlist(mappedWishlist);
+            setUserOrders(user.orders || []);
           } catch (err) {
             console.log("Error : ", err);
           }
@@ -63,87 +75,77 @@ export default function ProdProvider({ children }) {
   async function addToCart(product, index, array, type) {
     if (!currentUser) return navigate("/login");
 
+    // use product._id or product.id as fallback
+    const bookId = product._id || product.id;
+    if (!bookId) {
+      toast.error("Product ID not found");
+      return;
+    }
+
     try {
-      let res = await axios.get(`${API}/users/${currentUser}`);
-      let user = res.data;
-
-      user.cart.map((val) => {
-
-        //operation if product is allready in the cart
-        if (val.id === product.id) {
-          try {
-            if (type === "incr") {
-              product.stock === product.cartCount 
-                ? toast.error(`Only ${product.stock} stock is left`)
-                : (val.cartCount += 1, toast.success(`Added one more quantity`, { duration: 1000 }));
-            } else if (type === "checkincr" || !type) {
-              toast.info(`${product.title} is already in the cart`, { duration: 1000 });
-            } else if (type === "decr" && val.cartCount > 1) {
-              val.cartCount -= 1;
-              toast.error(`Removed one quantity`, { duration: 1000 });
-            } else if (type === "remove") {
-              user.cart = user.cart.filter((val) => val.id !== product.id);
-              toast.error(`${product?.title} Removed from Cart`, { duration: 1000 });
-            }
-            setUserCart(user.cart);
-            axios.patch(`${API}/users/${currentUser}`, { cart: user.cart });
-            onCart = true;
-          } catch (err) {
-            console.log("Error : ", err);
-          }
-        }
-      });
-
-      //product is not in the cart
-      if (!onCart) {
-        try {
-          if (product.stock === 0) toast.error("Product is out of stock", { duration: 1000 });
-          else {
-            product.cartCount = 1;
-            delete product.reviews;
-            const newCart = [...user.cart, product];
-            await axios.patch(`${API}/users/${currentUser}`, { cart: newCart });
-            toast.success(`${product?.title} added to Cart`, { duration: 1000 });
-            setUserCart(newCart);
-          }
-        } catch (err) {
-          console.log("Error : ", err);
-        }
+      if (type === "checkincr") {
+        // adding product (if already exists backend will return error)
+        await api.post("/api/cart", { bookId });
+        toast.success(`${product?.title} added to Cart`, { duration: 1000 });
+      } else if (type === "incr") {
+        const newQty = Number(product.cartCount) + 1;
+        await api.put("/api/cart", { bookId, qty: newQty });
+        toast.success("Added one more quantity", { duration: 1000 });
+      } else if (type === "decr") {
+        const newQty = Number(product.cartCount) - 1;
+        await api.put("/api/cart", { bookId, qty: newQty });
+        toast.success("Removed one quantity", { duration: 1000 });
+      } else if (type === "remove") {
+        await api.delete("/api/cart", { data: { bookId } });
+        toast.error(`${product?.title} Removed from Cart`, { duration: 1000 });
+      } else {
+        // default add
+        await api.post("/api/cart", { bookId });
+        toast.success(`${product?.title} added to Cart`, { duration: 1000 });
       }
-      onCart = false;
+
+      // refresh cart
+      const cartRes = await api.get("/api/cart");
+      const mappedCart = (cartRes.data.items || []).map((it) => ({
+        id: it.book._id,
+        title: it.book.title,
+        price: it.book.price,
+        image: it.book.image,
+        rating: it.book.rating,
+        cartCount: it.qty,
+      }));
+      setUserCart(mappedCart);
     } catch (err) {
+      const message = err?.response?.data?.message || err?.message || "Error";
+      toast.error(message);
       console.log("Error : ", err);
     }
   }
 // adding and removing from wishlist functionality.
   async function addToWishlist(product) {
-    delete product.reviews;
     if (!currentUser) return navigate("/login");
 
-    try {
-      let res = await axios.get(`${API}/users/${currentUser}`);
-      let wishlist = res.data.wishlist;
-      let onwishList = wishlist.some((val) => product.id === val.id);
+    // use product._id or product.id as fallback
+    const bookId = product._id || product.id;
+    if (!bookId) {
+      toast.error("Product ID not found");
+      return;
+    }
 
-      if (!onwishList) {
-        try {
-          const newWishlist = [...wishlist, product];
-          await axios.patch(`${API}/users/${currentUser}`, { wishlist: newWishlist });
-          toast.success(`${product?.title} added to Wishlist`, { duration: 1000 });
-          setUserWishlist(newWishlist);
-        } catch (err) {
-          console.log("Error : ", err);
-        }
+    try {
+      // check presence
+      const existing = userWishlist.some((val) => val._id === bookId || val.book?._id === bookId);
+      if (!existing) {
+        await api.post("/api/wishlist", { bookId });
+        toast.success(`${product?.title} added to Wishlist`, { duration: 1000 });
       } else {
-        try {
-          const newWishlist = wishlist.filter((val) => val.id !== product.id);
-          await axios.patch(`${API}/users/${currentUser}`, { wishlist: newWishlist });
-          toast.error(`${product.title} removed from wishlist`, { duration: 1000 });
-          setUserWishlist(newWishlist);
-        } catch (err) {
-          console.log("Error : ", err);
-        }
+        await api.delete(`/api/wishlist/${bookId}`);
+        toast.error(`${product.title} removed from wishlist`, { duration: 1000 });
       }
+
+      const wishRes = await api.get("/api/wishlist");
+      const mappedWishlist = (wishRes.data.wishlist || []).map((it) => it.book);
+      setUserWishlist(mappedWishlist);
     } catch (err) {
       console.log("Error : ", err);
     }
@@ -173,10 +175,6 @@ export default function ProdProvider({ children }) {
       console.log("Error : ", err);
     }
   }
-
-  
-
-
   return (
     <Context.Provider
       value={{

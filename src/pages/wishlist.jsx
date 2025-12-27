@@ -24,14 +24,14 @@ function WishList() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {userWishlist.map((product) => (
               <div
-                key={product.id}
+                key={product._id || product.id}
                 className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-300 group"
               >
                 <div className="relative">
-                  <Link to={`/productView/${product.id}`}>
+                  <Link to={`/productView/${product._id || product.id}`}>
                     <div className="aspect-square bg-gray-100 flex items-center justify-center p-6">
                       <img
-                        src={product.image}
+                        src={product.image?.url}
                         alt={product.title}
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
@@ -58,7 +58,7 @@ function WishList() {
                 </div>
 
                 <div className="p-4">
-                  <Link to={`/productView/${product.id}`}>
+                  <Link to={`/productView/${product._id || product.id}`}>
                     <h3 className="font-medium text-gray-900 mb-2 line-clamp-2 h-12 text-sm leading-tight">
                       {product.title}
                     </h3>
@@ -96,7 +96,7 @@ function WishList() {
 
                   {/* Add to Cart Button */}
                   <button
-                    onClick={() => addToCart(product, "incr")}
+                    onClick={() => addToCart(product, 0, [], "checkincr")}
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-medium transition-colors duration-200 flex items-center justify-center gap-2 text-sm"
                   >
                     <svg

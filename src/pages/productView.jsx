@@ -1,16 +1,33 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Navbar from "../components/common/Navbar";
 import { useParams } from "react-router-dom";
 import { Context } from "../context/ProductContext";
 import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
-import CustomerReviews from "../components/ui/reviews";
+import api from "../api/axios";
 
 function ProductView() {
   const { id } = useParams();
   let { addToCart, addToWishlist, byNow, productList, userWishlist } =
     useContext(Context);
-  const prod = productList.find((val) => String(val.id) === id);
+  const [prod, setProd] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProduct() {
+      try {
+        const res = await api.get(`/api/books/${id}`);
+        setProd(res.data.book || res.data);
+      } catch (err) {
+        console.error("Failed to fetch product", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchProduct();
+  }, [id]);
+
   let xprice = prod?.price,
     price = ((prod?.price / 2.5) * (Math.random() + 1)).toFixed(2),
     off = Math.floor(((xprice - price) * 100) / xprice);
@@ -19,9 +36,9 @@ function ProductView() {
   // let x = reviewCount/10
   // let p1 = Math.floor(x/2),p2 = Math.floor(x/5),p3 = Math.floor(x/3),p4 = Math.floor(x/1.5),p5 = reviewCount-(p4+p3+p2+p1)
   // let reviewArr = [p5,p4,p3,p2,p1]
-  let ratings = prod?.reviews?.flatMap((x) => x.rating);
+  let ratings = prod?.reviews?.flatMap((x) => x.rating) ;
   let sum = 0;
-  let reviewCount =  ratings?.length;
+  let reviewCount = ratings?.length;
   let p1 = 0,
     p2 = 0,
     p3 = 0,
@@ -49,7 +66,7 @@ function ProductView() {
       }
     }
   }
-  let avgRatings = sum>0? (sum / ratings?.length).toFixed(1) : 0
+  let avgRatings = sum > 0 ? (sum / ratings?.length).toFixed(1) : 0;
   let reviewArr = [p5, p4, p3, p2, p1];
   let stock;
 
@@ -70,6 +87,22 @@ function ProductView() {
       <span className="bg-red-500 text-white px-3 py-1 rounded-md text-xs font-medium">
         Out of Stock!
       </span>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-gray-600">Loading product...</p>
+      </div>
+    );
+  }
+
+  if (!prod) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-gray-600">Product not found</p>
+      </div>
     );
   }
 
@@ -99,7 +132,7 @@ function ProductView() {
             <div className="relative group">
               <div className="aspect-square bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
                 <img
-                  src={product?.image}
+                  src={product?.image?.url}
                   alt={product?.title}
                   className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out p-8"
                 />

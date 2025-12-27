@@ -1,4 +1,4 @@
-import React, { Children, useContext } from "react";
+import React, { useContext } from "react";
 import { AdmContext } from "./AdmContext";
 import AdminNav from "./AdminNav";
 import {
@@ -15,30 +15,34 @@ import {
 } from "recharts";
 
 export default function AdmDash() {
-  const { userList, productList, orderList } = useContext(AdmContext);
+  const { userList, productList, orderList, stats } = useContext(AdmContext);
 
-  const totalRevenue = orderList.reduce(
+  const totalRevenue = stats.revenue || orderList.reduce(
     (sum, order) => sum + Number(order.total || 0),
     0
   );
+
+  const usersCount = stats.usersCount || userList.length;
+  const productsCount = stats.productsCount || productList.length;
+  const ordersCount = stats.ordersCount || orderList.length;
 
   // Chart data
   const orderStatusData = [
     {
       name: "Delivered",
-      value: orderList.filter((o) => o.orderStatus === "delivered").length,
+      value: orderList.filter((o) => o.status === "delivered").length,
     },
     {
       name: "Shipped",
-      value: orderList.filter((o) => o.orderStatus === "shipped").length,
+      value: orderList.filter((o) => o.status === "shipped").length,
     },
     {
       name: "Cancelled",
-      value: orderList.filter((o) => o.orderStatus === "cancelled").length,
+      value: orderList.filter((o) => o.status === "cancelled").length,
     },
     {
       name: "Pending",
-      value: orderList.filter((o) => o.orderStatus === "pending").length,
+      value: orderList.filter((o) => o.status === "pending").length,
     },
   ];
 
@@ -60,7 +64,7 @@ export default function AdmDash() {
     }
   );
 
-  const productsCount = Object.keys(productsBycategory).map((key) => ({
+  const productsCategoryData = Object.keys(productsBycategory).map((key) => ({
     name: key,
     productsno: productsBycategory[key],
   }));
@@ -83,25 +87,25 @@ export default function AdmDash() {
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <h2 className="text-lg font-semibold text-gray-700">Users</h2>
             <p className="text-2xl font-bold text-blue-600">
-              {userList.length}
+              {usersCount}
             </p>
           </div>
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <h2 className="text-lg font-semibold text-gray-700">Products</h2>
             <p className="text-2xl font-bold text-green-600">
-              {productList.length}
+              {productsCount}
             </p>
           </div>
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <h2 className="text-lg font-semibold text-gray-700">Orders</h2>
             <p className="text-2xl font-bold text-yellow-600">
-              {orderList.length}
+              {ordersCount}
             </p>
           </div>
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <h2 className="text-lg font-semibold text-gray-700">Revenue</h2>
             <p className="text-2xl font-bold text-purple-600">
-              ${totalRevenue.toFixed(2)}
+              ₹{totalRevenue.toFixed(2)}
             </p>
           </div>
         </div>
@@ -140,7 +144,7 @@ export default function AdmDash() {
               Products by Category
             </h3>
             <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={productsCount}>
+              <BarChart data={productsCategoryData}>
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
