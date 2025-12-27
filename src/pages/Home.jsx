@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Navbar from "../components/common/Navbar";
 import { Context } from "../context/ProductContext";
 import { Link } from "react-router-dom";
@@ -7,19 +7,15 @@ import HeroCarousel from "../components/ui/heroSec";
 import Footer from "../components/common/Footer";
 import Spinner from "../components/ui/LoaadingSpinner";
 import { BackendProductContext } from "../context/BackendProductContext";
+import { Heart, ShoppingCart, Star, TrendingUp } from "lucide-react";
 
 function Home() {
-  const { currentUser, addToCart, addToWishlist, userWishlist} =
-    useContext(Context);
-    
-const {
-  books: productList,
-  loading,
-} = useContext(BackendProductContext);
-  // Show only first 8 products on home page
+  const { addToCart, addToWishlist, userWishlist } = useContext(Context);
+  const { books: productList, loading } = useContext(BackendProductContext);
+
   const featuredProducts = productList.slice(0, 8);
-  
-   if (loading) {
+
+  if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <Spinner />
@@ -28,150 +24,156 @@ const {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
-      <section>
-        <HeroCarousel books = {productList.slice(0,3)}/>
-      </section>
+      <HeroCarousel books={productList.slice(0, 3)} />
 
       {/* Featured Products Section */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full font-medium mb-4">
+            <TrendingUp className="w-4 h-4" />
+            <span>Trending Now</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Featured Books
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Handpicked selection of our most popular and trending books just for
-            you
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Curated collection of bestsellers and must-reads handpicked just for you
           </p>
         </div>
 
-        {featuredProducts.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {featuredProducts.map((product, index, array) => (
-              <div
-                key={product._id || product.id}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-                <div className="relative overflow-hidden">
-                  <Link to={`/productView/${product._id || product.id}`}>
-                  <img
-                    src={product.image?.url}
-                    alt={product.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  </Link>
-                  <div className="absolute top-4 right-4">
-                    <button
-                      onClick={() => addToWishlist(product, index, array)}
-                      className="bg-white p-2 rounded-full shadow-md hover:scale-110 transition-transform duration-200"
-                    >
-                      {userWishlist?.some((val) => val._id === product._id ) ? (
-                        // Filled heart when product is in wishlist
-                        <svg
-                          className="w-6 h-6 text-red-500"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      ) : (
-                        // Outline heart when not in wishlist
-                        <svg
-                          className="w-6 h-6 text-gray-600"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
-                          />
-                        </svg>
-                      )}
-                    </button>
-                  </div>
-                  
-                </div>
+        {featuredProducts.length > 0 ? (
+          <>
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {featuredProducts.map((product) => {
+                const isInWishlist = userWishlist?.some((item) => item._id === product._id);
 
-                <div className="p-6">
-                  <Link to={`/productView/${product._id || product.id}`}>
-                  <h3 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-2 min-h-[3.5rem]">
-                    {product.title}
-                  </h3>
-                        
-                  <div className="flex items-center gap-1 mb-3">
-                    
-                    {[...Array(5)].map((_, index) => (
-                      <svg
-                        key={index}
-                        className={`w-4 h-4 ${index < Math.round(product.rating)
-                            ? "text-yellow-400"
-                            : "text-gray-300"
-                          }`}
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                    <span className="text-sm text-gray-500 ml-1">
-                      ({product.rating})
-                    </span>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-blue-600">
-                      ${(product.price)}
-                    </span>
-                  </div>
-                    </Link>
-                  <button
-                    onClick={() => addToCart(product, index, array, "checkincr")}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer"
+                return (
+                  <div
+                    key={product._id || product.id}
+                    className="group relative"
                   >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 8M7 13l-1.5-8M13 13v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8-2V9a2 2 0 00-2-2H9a2 2 0 00-2 2v2.01"
-                      />
-                    </svg>
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+                    {/* Product Card */}
+                    <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-300 transition-all duration-300 h-full flex flex-col">
+                      
+                      {/* Image Container */}
+                      <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                        <Link to={`/productView/${product._id || product.id}`}>
+                          <img
+                            src={product.image?.url}
+                            alt={product.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        </Link>
 
-        {featuredProducts.length > 0 && (
-          <div className="text-center mt-12">
-            <Link
-              to="/products"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 inline-block transform hover:scale-105"
-            >
-              View All Books →
-            </Link>
+                        {/* Overlay on Hover */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                        {/* Wishlist Button */}
+                        <button
+                          onClick={() => addToWishlist(product)}
+                          className={`absolute top-4 right-4 p-2.5 rounded-full backdrop-blur-md transition-all duration-300 shadow-lg ${
+                            isInWishlist
+                              ? "bg-red-500 text-white scale-100"
+                              : "bg-white/90 text-gray-700 scale-90 group-hover:scale-100"
+                          }`}
+                        >
+                          <Heart className={`w-5 h-5 ${isInWishlist ? "fill-current" : ""}`} />
+                        </button>
+
+                        {/* Stock Badge */}
+                        {product.stock > 0 && product.stock < 10 && (
+                          <div className="absolute top-4 left-4">
+                            <span className="bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                              {product.stock} LEFT
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Product Info */}
+                      <div className="p-5 flex-1 flex flex-col">
+                        <Link to={`/productView/${product._id || product.id}`} className="flex-1">
+                          <h3 className="font-bold text-lg text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors min-h-[3.5rem]">
+                            {product.title}
+                          </h3>
+
+                          <p className="text-sm text-gray-600 mb-3 font-medium">
+                            {product.author}
+                          </p>
+
+                          {/* Rating */}
+                          {product.rating && (
+                            <div className="flex items-center gap-2 mb-4">
+                              <div className="flex">
+                                {[...Array(5)].map((_, index) => (
+                                  <Star
+                                    key={index}
+                                    className={`w-4 h-4 ${
+                                      index < Math.round(product.rating)
+                                        ? "text-amber-400 fill-amber-400"
+                                        : "text-gray-300 fill-gray-300"
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+                              <span className="text-sm font-semibold text-gray-700">
+                                {product.rating}
+                              </span>
+                            </div>
+                          )}
+
+                          {/* Price */}
+                          <div className="flex items-baseline gap-2 mb-4">
+                            <span className="text-3xl font-bold text-gray-900">
+                              ${product.price}
+                            </span>
+                          </div>
+                        </Link>
+
+                        {/* Add to Cart Button */}
+                        <button
+                          onClick={() => addToCart(product)}
+                          disabled={product.stock === 0}
+                          className="w-full bg-blue-600 hover:bg-blue-700 active:scale-95 disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-3 rounded-xl font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
+                        >
+                          <ShoppingCart className="w-5 h-5" />
+                          {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Hover Shadow Effect */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300 -z-10"></div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* View All Button */}
+            <div className="text-center mt-16">
+              <Link
+                to="/products"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                Explore All Books
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-20">
+            <p className="text-gray-500 text-lg">No products available at the moment</p>
           </div>
         )}
       </section>
 
-      {/* Features Section */}
-      <section className="bg-white py-16">
-       <HomeFooter /> 
-      </section>
+      <HomeFooter />
       <Footer />
     </div>
   );

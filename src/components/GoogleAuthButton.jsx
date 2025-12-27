@@ -16,6 +16,7 @@ export default function GoogleAuthButton() {
       callback: handleGoogleResponse,
     });
 
+
     google.accounts.id.renderButton(
       document.getElementById("googleBtn"),
       {
