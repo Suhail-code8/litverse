@@ -300,8 +300,8 @@ function Navbar() {
                       ) {
                         return (
                           <Link
-                            to={`/productView/${product.id}`}
-                            key={product.id}
+                            to={`/productView/${product._id}`}
+                            key={product._id}
                             className="block px-3 py-2 text-gray-700 hover:bg-blue-50 
                             hover:text-blue-600 transition-all duration-150 text-sm rounded-lg
                             font-medium"
