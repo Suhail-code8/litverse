@@ -81,7 +81,6 @@ export default function Signup() {
                 Full Name
               </label>
               <input
-                type="text"
                 value={name}
                 onChange={getName}
                 placeholder="Enter your name"

@@ -13,15 +13,15 @@ function WishList() {
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Your Wishlist</h1>
-          <span className="text-gray-500">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Your Wishlist</h1>
+          <span className="text-gray-500 text-sm">
             {userWishlist.length} {userWishlist.length === 1 ? 'item' : 'items'}
           </span>
         </div>
         
         {userWishlist.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {userWishlist.map((product) => (
               <div
                 key={product._id || product.id}
@@ -120,8 +120,8 @@ function WishList() {
           </div>
         ) : (
           // Empty Wishlist State
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center max-w-2xl mx-auto">
-            <div className="w-24 h-24 mx-auto mb-6 text-gray-300">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 sm:p-12 text-center max-w-2xl mx-auto">
+            <div className="w-16 sm:w-24 h-16 sm:h-24 mx-auto mb-6 text-gray-300">
               <svg fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
@@ -131,14 +131,14 @@ function WishList() {
               </svg>
             </div>
             
-            <h2 className="text-2xl font-bold text-gray-700 mb-4">Your wishlist is empty</h2>
-            <p className="text-gray-500 mb-8 max-w-md mx-auto">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4">Your wishlist is empty</h2>
+            <p className="text-gray-500 mb-8 max-w-md mx-auto text-sm sm:text-base">
               Save your favorite items here to easily find them later. Click the heart icon on any product to add it to your wishlist.
             </p>
             
             <button 
               onClick={() => navigate("/products")}
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-sm sm:text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
             >
               Continue Shopping
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

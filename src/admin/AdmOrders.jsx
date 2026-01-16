@@ -48,29 +48,29 @@ export default function AdmOrders() {
   return (
     <div className="flex">
       <AdminNav />
-      <div className="flex-1 lg:ml-52 p-6 max-w-6xl mx-auto space-y-8  min-h-screen">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800">Orders</h1>
-          <p className="text-gray-500 text-sm">Manage customer orders</p>
+      <div className="flex-1 lg:ml-52 p-4 sm:p-6 max-w-6xl mx-auto w-full space-y-6 sm:space-y-8 min-h-screen mt-8 lg:mt-0">
+        <div className="text-center sm:text-left">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">Orders</h1>
+          <p className="text-gray-500 text-xs sm:text-sm">Manage customer orders</p>
         </div>
 
         {/* Upper boxes for status count */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="rounded-lg p-4 text-center shadow-sm bg-yellow-50 text-yellow-700 border border-yellow-200">
-            <p className="text-xs uppercase font-medium">Pending</p>
-            <p className="text-lg font-bold">{statusCounts.pending}</p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="rounded-lg p-3 sm:p-4 text-center shadow-sm bg-yellow-50 text-yellow-700 border border-yellow-200">
+            <p className="text-xs font-medium uppercase">Pending</p>
+            <p className="text-xl sm:text-2xl font-bold mt-1">{statusCounts.pending}</p>
           </div>
-          <div className="rounded-lg p-4 text-center shadow-sm bg-blue-50 text-blue-700 border border-blue-200">
-            <p className="text-xs uppercase font-medium">Shipped</p>
-            <p className="text-lg font-bold">{statusCounts.shipped}</p>
+          <div className="rounded-lg p-3 sm:p-4 text-center shadow-sm bg-blue-50 text-blue-700 border border-blue-200">
+            <p className="text-xs font-medium uppercase">Shipped</p>
+            <p className="text-xl sm:text-2xl font-bold mt-1">{statusCounts.shipped}</p>
           </div>
-          <div className="rounded-lg p-4 text-center shadow-sm bg-green-50 text-green-700 border border-green-200">
-            <p className="text-xs uppercase font-medium">Delivered</p>
-            <p className="text-lg font-bold">{statusCounts.delivered}</p>
+          <div className="rounded-lg p-3 sm:p-4 text-center shadow-sm bg-green-50 text-green-700 border border-green-200">
+            <p className="text-xs font-medium uppercase">Delivered</p>
+            <p className="text-xl sm:text-2xl font-bold mt-1">{statusCounts.delivered}</p>
           </div>
-          <div className="rounded-lg p-4 text-center shadow-sm bg-red-50 text-red-700 border border-red-200">
-            <p className="text-xs uppercase font-medium">Cancelled</p>
-            <p className="text-lg font-bold">{statusCounts.cancelled}</p>
+          <div className="rounded-lg p-3 sm:p-4 text-center shadow-sm bg-red-50 text-red-700 border border-red-200">
+            <p className="text-xs font-medium uppercase">Cancelled</p>
+            <p className="text-xl sm:text-2xl font-bold mt-1">{statusCounts.cancelled}</p>
           </div>
         </div>
 
@@ -79,7 +79,7 @@ export default function AdmOrders() {
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="border border-blue-300 rounded-md px-3 py-1 text-sm shadow-sm bg-white focus:ring-2 focus:ring-blue-300 focus:border-none"
+            className="border border-blue-300 rounded-md px-3 py-2 text-xs sm:text-sm shadow-sm bg-white focus:ring-2 focus:ring-blue-300 focus:border-none"
           >
             <option value="All">All</option>
             <option value="pending">Pending</option>
@@ -92,7 +92,7 @@ export default function AdmOrders() {
         {/* listing orders */}
         <div className="bg-white border rounded-lg overflow-hidden shadow">
           <div className="overflow-x-auto">
-            <table className="w-full text-sm min-w-[900px]">
+            <table className="w-full text-xs sm:text-sm min-w-[600px]">
               <thead className="bg-gray-100 text-gray-700">
                 <tr>
                   <th className="px-4 py-2 text-left font-medium">Sl no</th>

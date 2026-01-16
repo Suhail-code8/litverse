@@ -203,31 +203,47 @@ function Navbar() {
             
 
             {/* Mobile icons (only show cart and profile on mobile) */}
-            <div className="flex md:hidden items-center space-x-4">
+            <div className="flex md:hidden items-center space-x-2 sm:space-x-3">
               {/* Mobile search button */}
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   document.querySelector(".mobile-search-input")?.focus();
                 }}
-                className="p-2 text-gray-600 hover:text-blue-600"
+                className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
               >
-                <Search size={22} />
+                <Search size={20} />
               </button>
 
-              {/* Cart icon*/}
+              {/* Wishlist icon for mobile */}
+              <Link
+                to={currentUser ? "/wishlist" : "/login"}
+                className="relative text-gray-600 hover:text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors"
+                title="Wishlist"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Heart size={20} />
+                {userWishlist?.length > 0 && (
+                  <span
+                    className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full font-bold"
+                    style={{ fontSize: "0.6rem" }}
+                  >
+                    {userWishlist.length}
+                  </span>
+                )}
+              </Link>
+
+              {/* Cart icon for mobile - VISIBLE NOW */}
               <Link
                 to={currentUser ? "/cart" : "/login"}
-                className="relative text-gray-600 hover:text-blue-600"
+                className="relative text-gray-600 hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-colors"
                 title="Shopping Cart"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <ShoppingCart size={22} />
+                <ShoppingCart size={20} />
                 {userCart?.length > 0 && (
                   <span
-                    className="absolute -top-1 -right-1 bg-gradient-to-r from-blue-500 to-indigo-500 
-                  text-white text-xs w-4 h-4 flex items-center justify-center rounded-full 
-                  font-medium"
+                    className="absolute -top-1 -right-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full font-bold"
                     style={{ fontSize: "0.6rem" }}
                   >
                     {userCart
@@ -320,6 +336,24 @@ function Navbar() {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Products
+                </Link>
+                <Link
+                  to={currentUser ? "/cart" : "/login"}
+                  className="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors flex items-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <ShoppingCart size={20} className="mr-3" />
+                  Shopping Cart
+                  {userCart?.length > 0 && (
+                    <span
+                      className="ml-auto bg-gradient-to-r from-blue-500 to-indigo-500 
+                    text-white text-xs px-2 py-1 rounded-full font-bold"
+                    >
+                      {userCart
+                        .flatMap((x) => x.cartCount)
+                        .reduce((a, b) => a + b, 0)}
+                    </span>
+                  )}
                 </Link>
                 <Link
                   to={currentUser ? "/wishlist" : "/login"}

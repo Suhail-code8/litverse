@@ -86,22 +86,22 @@ export default function ProdProvider({ children }) {
       if (type === "checkincr") {
         // adding product (if already exists backend will return error)
         await api.post("/api/cart", { bookId });
-        toast.success(`${product?.title} added to Cart`, { duration: 1000 });
+        toast.success(`${product?.title} added to Cart`, { duration: 600 });
       } else if (type === "incr") {
         const newQty = Number(product.cartCount) + 1;
         await api.put("/api/cart", { bookId, qty: newQty });
-        toast.success("Added one more quantity", { duration: 1000 });
+        toast.success("Added one more quantity", { duration: 600 });
       } else if (type === "decr") {
         const newQty = Number(product.cartCount) - 1;
         await api.put("/api/cart", { bookId, qty: newQty });
-        toast.success("Removed one quantity", { duration: 1000 });
+        toast.success("Removed one quantity", { duration: 600 });
       } else if (type === "remove") {
         await api.delete("/api/cart", { data: { bookId } });
-        toast.error(`${product?.title} Removed from Cart`, { duration: 1000 });
+        toast.error(`${product?.title} Removed from Cart`, { duration: 600 });
       } else {
         // default add
         await api.post("/api/cart", { bookId });
-        toast.success(`${product?.title} added to Cart`, { duration: 1000 });
+        toast.success(`${product?.title} added to Cart`, { duration: 600 });
       }
 
       // refresh cart
@@ -137,10 +137,10 @@ export default function ProdProvider({ children }) {
       const existing = userWishlist.some((val) => val._id === bookId || val.book?._id === bookId);
       if (!existing) {
         await api.post("/api/wishlist", { bookId });
-        toast.success(`${product?.title} added to Wishlist`, { duration: 1000 });
+        toast.success(`${product?.title} added to Wishlist`, { duration: 600 });
       } else {
         await api.delete(`/api/wishlist/${bookId}`);
-        toast.error(`${product.title} removed from wishlist`, { duration: 1000 });
+        toast.error(`${product.title} removed from wishlist`, { duration: 600 });
       }
 
       const wishRes = await api.get("/api/wishlist");
