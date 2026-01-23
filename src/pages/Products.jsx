@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import Navbar from "../components/common/Navbar";
 import { Context } from "../context/ProductContext";
-import { Link } from "react-router-dom";
-import HomeFooter from "../components/ui/HomeFooter";
+import { Link, useSearchParams } from "react-router-dom";
+import FeaturesSection from "../components/ui/FeaturesSection";
 import Footer from "../components/common/Footer";
 import { BackendProductContext } from "../context/BackendProductContext";
 
@@ -59,6 +59,27 @@ function Products() {
       console.log("Error : ", err);
     }
   }
+
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get("category");
+
+  // Filter based on URL parameter
+  React.useEffect(() => {
+    if (productList.length > 0) {
+      if (categoryParam === "fiction") {
+        setfilteredList(productList.filter((val) => val.category === "Fiction"));
+      } else if (categoryParam === "non-fiction") {
+        setfilteredList(productList.filter((val) => val.category === "Non-Fiction"));
+      } else if (categoryParam === "bestsellers") {
+        // Example logic for bestsellers (e.g., rating > 4.5 or manually tagged)
+        setfilteredList(productList.filter((val) => val.rating >= 4.8));
+      } else if (categoryParam === "lifestyle") {
+        setfilteredList(productList.filter((val) => val.category === "Lifestyle"));
+      } else {
+        setfilteredList(productList);
+      }
+    }
+  }, [categoryParam, productList, setfilteredList]);
 
   if (loading) {
     return (
@@ -270,11 +291,10 @@ function Products() {
                         {[...Array(5)].map((_, index) => (
                           <svg
                             key={index}
-                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                              index < Math.round(product.rating)
-                                ? "text-yellow-400"
-                                : "text-gray-300"
-                            }`}
+                            className={`w-4 h-4 sm:w-5 sm:h-5 ${index < Math.round(product.rating)
+                              ? "text-yellow-400"
+                              : "text-gray-300"
+                              }`}
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -351,7 +371,7 @@ function Products() {
 
       {/* Footer Section */}
       <section className="bg-white pt-12">
-        <HomeFooter />
+        <FeaturesSection />
         <Footer />
       </section>
     </div>

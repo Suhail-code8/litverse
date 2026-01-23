@@ -42,10 +42,10 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-      if (
+    if (
       error.response?.status === 401 &&
       (originalRequest.url.includes("/api/auth/login") ||
-       originalRequest.url.includes("/api/auth/refresh"))
+        originalRequest.url.includes("/api/auth/refresh"))
     ) {
       return Promise.reject(error);
     }
@@ -80,7 +80,7 @@ api.interceptors.response.use(
         processQueue(err, null);
 
         localStorage.removeItem("accessToken");
-        window.location.href = "/login";
+        // window.location.href = "/login";
 
         return Promise.reject(err);
       } finally {
